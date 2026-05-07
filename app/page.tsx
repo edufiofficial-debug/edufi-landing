@@ -11,12 +11,19 @@ export default function Home() {
     studentClass: "",
     phone: "",
   });
+  const [couponCode, setCouponCode] = useState("");
 
   const handleChange = (field: string, value: string) => {
     setFormData((prev) => ({
       ...prev,
       [field]: value,
     }));
+  };
+
+  const generateCoupon = () => {
+    const code = `EDUFI50-${Math.random().toString(36).substring(2, 8).toUpperCase()}`;
+    setCouponCode(code);
+    setShowForm(true);
   };
 
   const handleSubmit = () => {
@@ -62,6 +69,38 @@ export default function Home() {
           Contact on WhatsApp: <a href="https://wa.me/919501941186" className="font-semibold underline decoration-white/70 underline-offset-2">9501941186</a>
         </span>
       </div>
+
+      <section className="bg-red-700 text-white py-4 px-6">
+        <div className="mx-auto flex flex-col gap-3 items-center justify-between text-center md:flex-row md:text-left md:gap-0 md:items-center max-w-6xl">
+          <div>
+            <p className="text-lg font-bold tracking-[0.1em] uppercase">50% OFF Limited Offer</p>
+            <p className="text-sm text-orange-100 mt-1">
+              Click now to join and grab your exclusive coupon.
+            </p>
+          </div>
+
+          <button
+            onClick={generateCoupon}
+            className="rounded-full bg-white px-6 py-3 text-red-700 font-semibold transition-all duration-300 hover:bg-orange-100"
+          >
+            Click Now to Join
+          </button>
+        </div>
+      </section>
+
+      {couponCode && (
+        <section className="bg-orange-50 py-6 px-6">
+          <div className="mx-auto max-w-6xl rounded-[1.75rem] border border-orange-200 bg-white p-6 text-center shadow-[0_20px_60px_rgba(251,146,60,0.12)]">
+            <p className="text-sm uppercase tracking-[0.24em] text-red-600 font-semibold">
+              Coupon Generated
+            </p>
+            <p className="mt-3 text-3xl font-bold text-red-700">{couponCode}</p>
+            <p className="mt-3 text-slate-600">
+              Use this code for 50% off when you join via WhatsApp.
+            </p>
+          </div>
+        </section>
+      )}
 
       {/* HERO SECTION */}
       <section className="relative overflow-hidden bg-gradient-to-br from-red-700 via-orange-500 to-orange-100 py-24 px-6">
