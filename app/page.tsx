@@ -56,9 +56,9 @@ export default function Home() {
     <main className="min-h-screen bg-gradient-to-br from-red-700 via-orange-500 to-orange-100 text-slate-950">
 
       <div className="bg-red-950/95 text-white py-3 text-center text-sm tracking-[0.18em] uppercase">
-        <span className="font-semibold">Edufi Classes</span>
+        <span className="font-semibold text-base sm:text-lg">Edufi Classes</span>
         <span className="mx-2 hidden sm:inline">•</span>
-        <span>
+        <span className="text-sm sm:text-base">
           Contact on WhatsApp: <a href="https://wa.me/919501941186" className="font-semibold underline decoration-white/70 underline-offset-2">9501941186</a>
         </span>
       </div>
@@ -256,6 +256,39 @@ export default function Home() {
                   "Learning with Edufi made preparation efficient and exam-ready in weeks."
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* LOCATION SECTION */}
+      <section className="bg-white/90 py-20 px-6">
+        <div className="mx-auto max-w-6xl rounded-[2rem] border border-red-100 bg-red-50 p-8 shadow-[0_24px_80px_rgba(251,146,60,0.12)]">
+          <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
+            <div>
+              <p className="text-sm uppercase tracking-[0.24em] text-red-600 font-semibold">
+                Location
+              </p>
+              <h2 className="mt-4 text-3xl font-bold text-slate-950">
+                Visit us at Edufi Classes
+              </h2>
+              <p className="mt-4 inline-flex items-center gap-3 rounded-full bg-white px-4 py-3 text-lg font-semibold text-red-700 shadow-sm">
+                <span className="text-xl">📍</span>
+                202, Lajpat Nagar, Hisar
+              </p>
+              <p className="mt-4 text-slate-600 max-w-xl">
+                Reach us on WhatsApp at <a href="https://wa.me/919501941186" className="font-semibold text-red-700 underline">9501941186</a> for admissions and enquiries.
+              </p>
+            </div>
+
+            <div className="h-72 overflow-hidden rounded-[1.75rem] border border-red-200 shadow-[0_20px_60px_rgba(251,146,60,0.15)] lg:h-80">
+              <iframe
+                title="Edufi Classes Hisar Location"
+                src="https://www.google.com/maps?q=202%2C%20Lajpat%20Nagar%2C%20Hisar&output=embed"
+                className="h-full w-full border-0"
+                allowFullScreen
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
