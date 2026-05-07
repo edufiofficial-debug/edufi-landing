@@ -12,6 +12,59 @@ export default function Home() {
     phone: "",
   });
   const [couponCode, setCouponCode] = useState("");
+  const [selectedCourse, setSelectedCourse] = useState<"concepts" | "problemsolving" | "homework">("concepts");
+
+  const courses: Record<"concepts" | "problemsolving" | "homework", {
+    title: string;
+    tag: string;
+    description: string;
+    features: string[];
+    price: string;
+    period: string;
+  }> = {
+    concepts: {
+      title: "Concepts + Classwork",
+      tag: "Maths Mastery",
+      description:
+        "Build confidence in arithmetic, algebra, geometry, and number sense with strong textbook-aligned lessons.",
+      features: [
+        "Topic-wise detailed explanations",
+        "Textbook-aligned curriculum",
+        "Interactive classwork sessions",
+        "Concept-building exercises",
+      ],
+      price: "₹2,499",
+      period: "per month",
+    },
+    problemsolving: {
+      title: "Problem Solving",
+      tag: "Reasoning Edge",
+      description:
+        "Strengthen logical thinking and word-problem skills with step-by-step practice for school maths.",
+      features: [
+        "Step-by-step problem walkthroughs",
+        "Word problem mastery",
+        "Logic and reasoning drills",
+        "Practice question bank",
+      ],
+      price: "₹3,499",
+      period: "per month",
+    },
+    homework: {
+      title: "Homework & Revision",
+      tag: "Foundation Support",
+      description:
+        "Regular quizzes, revision sessions, and homework help to keep your maths fundamentals strong.",
+      features: [
+        "Daily homework guidance",
+        "Weekly revision sessions",
+        "Progress quizzes",
+        "Doubt clearing support",
+      ],
+      price: "₹1,999",
+      period: "per month",
+    },
+  };
 
   const handleChange = (field: string, value: string) => {
     setFormData((prev) => ({
@@ -133,57 +186,83 @@ export default function Home() {
         </div>
       </section>
 
-      {/* COURSES & PRICING SECTION */}
+      {/* COURSES SELECTION SECTION */}
       <section className="bg-red-50 py-20 px-6">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <p className="text-sm uppercase tracking-[0.24em] text-red-600 font-semibold">
-              Courses
+              Explore Courses
             </p>
             <h2 className="text-4xl font-bold mt-3 text-slate-950">
-              Build a strong maths foundation for 6th–10th
+              Select your preferred learning path
             </h2>
             <p className="mt-4 text-slate-600 max-w-2xl mx-auto">
-              Structured classes, live doubt solving, and focused practice for school maths.
+              Choose the course that best fits your learning style and goals.
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-3">
-            <div className="rounded-[2rem] border border-red-100 bg-red-50 p-8 shadow-[0_24px_80px_rgba(251,146,60,0.12)] transition-all duration-300 hover:-translate-y-1">
-              <span className="inline-flex items-center justify-center rounded-full bg-red-100 text-red-700 px-4 py-2 text-sm font-semibold">
-                Maths Mastery
-              </span>
-              <h3 className="mt-6 text-2xl font-semibold text-slate-950">Concepts + Classwork</h3>
-              <p className="mt-4 text-slate-600">
-                Build confidence in arithmetic, algebra, geometry, and number sense with textbook-aligned lessons.
+          <div className="rounded-[2rem] border border-red-100 bg-white p-8 shadow-[0_24px_80px_rgba(251,146,60,0.12)]">
+            <label className="block mb-6">
+              <p className="text-sm uppercase tracking-[0.24em] text-red-600 font-semibold mb-3">
+                Select a Course
               </p>
-            </div>
+              <select
+                value={selectedCourse}
+                onChange={(e) => setSelectedCourse(e.target.value as "concepts" | "problemsolving" | "homework")}
+                className="w-full appearance-none rounded-xl border-2 border-red-200 bg-white px-4 py-3 text-lg font-semibold text-slate-950 transition-all duration-300 focus:border-red-600 focus:outline-none focus:ring-2 focus:ring-red-200 cursor-pointer"
+              >
+                <option value="concepts">Concepts + Classwork (Maths Mastery)</option>
+                <option value="problemsolving">Problem Solving (Reasoning Edge)</option>
+                <option value="homework">Homework & Revision (Foundation Support)</option>
+              </select>
+            </label>
 
-            <div className="rounded-[2rem] border border-orange-100 bg-orange-50 p-8 shadow-[0_24px_80px_rgba(251,146,60,0.12)] transition-all duration-300 hover:-translate-y-1">
-              <span className="inline-flex items-center justify-center rounded-full bg-orange-100 text-orange-700 px-4 py-2 text-sm font-semibold">
-                Reasoning Edge
-              </span>
-              <h3 className="mt-6 text-2xl font-semibold text-slate-950">Problem Solving</h3>
-              <p className="mt-4 text-slate-600">
-                Strengthen logical thinking and word-problem skills with step-by-step practice for school maths.
-              </p>
-            </div>
+            <div className="rounded-[1.75rem] border border-orange-200 bg-gradient-to-br from-orange-50 to-red-50 p-8 transition-all duration-300">
+              <div className="flex items-center justify-between mb-6">
+                <span className="inline-flex items-center justify-center rounded-full bg-red-100 text-red-700 px-4 py-2 text-sm font-semibold">
+                  {courses[selectedCourse].tag}
+                </span>
+                <p className="text-3xl font-bold text-red-700">{courses[selectedCourse].price}</p>
+              </div>
 
-            <div className="rounded-[2rem] border border-red-100 bg-red-50 p-8 shadow-[0_24px_80px_rgba(251,146,60,0.12)] transition-all duration-300 hover:-translate-y-1">
-              <span className="inline-flex items-center justify-center rounded-full bg-red-100 text-red-700 px-4 py-2 text-sm font-semibold">
-                Foundation Support
-              </span>
-              <h3 className="mt-6 text-2xl font-semibold text-slate-950">Homework & Revision</h3>
-              <p className="mt-4 text-slate-600">
-                Regular quizzes, revision sessions, and homework help to keep your maths fundamentals strong.
+              <h3 className="text-3xl font-bold text-slate-950 mb-2">
+                {courses[selectedCourse].title}
+              </h3>
+              <p className="text-slate-500 mb-2">{courses[selectedCourse].period}</p>
+
+              <p className="mt-4 text-slate-700 mb-6 text-lg">
+                {courses[selectedCourse].description}
               </p>
+
+              <div className="mb-8">
+                <p className="text-sm uppercase tracking-[0.24em] text-red-600 font-semibold mb-4">
+                  What's Included
+                </p>
+                <ul className="space-y-3">
+                  {courses[selectedCourse].features.map((feature, idx) => (
+                    <li key={idx} className="flex items-start gap-3 text-slate-700">
+                      <span className="mt-1 h-6 w-6 flex items-center justify-center rounded-full bg-red-600 text-white font-bold text-sm">
+                        ✓
+                      </span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <button
+                onClick={() => setShowForm(true)}
+                className="w-full rounded-xl bg-red-700 px-6 py-4 text-center text-lg font-semibold text-white transition-all duration-300 hover:bg-red-800 shadow-[0_10px_30px_rgba(220,38,38,0.2)]"
+              >
+                Enroll in {courses[selectedCourse].title}
+              </button>
             </div>
           </div>
 
           <div className="mt-16 rounded-[2rem] border border-red-100 bg-red-100/80 p-8 shadow-[0_24px_80px_rgba(251,146,60,0.18)]">
             <div className="text-center mb-10">
               <p className="text-sm uppercase tracking-[0.24em] text-red-700 font-semibold">
-                Pricing
+                All Plans
               </p>
               <h3 className="text-3xl md:text-4xl font-bold text-slate-950">
                 Choose the right maths plan
