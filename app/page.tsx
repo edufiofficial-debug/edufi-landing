@@ -12,15 +12,16 @@ export default function Home() {
     phone: "",
   });
   const [couponCode, setCouponCode] = useState("");
-  const [selectedCourse, setSelectedCourse] = useState<"concepts" | "problemsolving" | "homework">("concepts");
+  const [selectedCourse, setSelectedCourse] = useState<"concepts" | "problemsolving" | "homework" | "mentalability">("concepts");
 
-  const courses: Record<"concepts" | "problemsolving" | "homework", {
+  const courses: Record<"concepts" | "problemsolving" | "homework" | "mentalability", {
     title: string;
     tag: string;
     description: string;
     features: string[];
     price: string;
     period: string;
+    status?: string;
   }> = {
     concepts: {
       title: "Concepts + Classwork",
@@ -63,6 +64,22 @@ export default function Home() {
       ],
       price: "₹1,999",
       period: "per month",
+    },
+    mentalability: {
+      title: "Maths Summer Mental Ability",
+      tag: "Summer Intensive",
+      description:
+        "Master Math in 30 days with this exclusive summer course. Daily 30-minute sessions designed to boost your mental calculation speed and mathematical thinking.",
+      features: [
+        "Daily 30-minute sessions",
+        "1 worksheet daily for practice",
+        "Speed increase techniques",
+        "Mental math growth techniques",
+        "Best problem-solving approach",
+      ],
+      price: "₹2,999",
+      period: "30-day course",
+      status: "Launching Soon",
     },
   };
 
@@ -208,20 +225,28 @@ export default function Home() {
               </p>
               <select
                 value={selectedCourse}
-                onChange={(e) => setSelectedCourse(e.target.value as "concepts" | "problemsolving" | "homework")}
+                onChange={(e) => setSelectedCourse(e.target.value as "concepts" | "problemsolving" | "homework" | "mentalability")}
                 className="w-full appearance-none rounded-xl border-2 border-red-200 bg-white px-4 py-3 text-lg font-semibold text-slate-950 transition-all duration-300 focus:border-red-600 focus:outline-none focus:ring-2 focus:ring-red-200 cursor-pointer"
               >
                 <option value="concepts">Concepts + Classwork (Maths Mastery)</option>
                 <option value="problemsolving">Problem Solving (Reasoning Edge)</option>
                 <option value="homework">Homework & Revision (Foundation Support)</option>
+                <option value="mentalability">Maths Summer Mental Ability (Summer Intensive)</option>
               </select>
             </label>
 
             <div className="rounded-[1.75rem] border border-orange-200 bg-gradient-to-br from-orange-50 to-red-50 p-8 transition-all duration-300">
               <div className="flex items-center justify-between mb-6">
-                <span className="inline-flex items-center justify-center rounded-full bg-red-100 text-red-700 px-4 py-2 text-sm font-semibold">
-                  {courses[selectedCourse].tag}
-                </span>
+                <div className="flex items-center gap-2">
+                  <span className="inline-flex items-center justify-center rounded-full bg-red-100 text-red-700 px-4 py-2 text-sm font-semibold">
+                    {courses[selectedCourse].tag}
+                  </span>
+                  {courses[selectedCourse].status && (
+                    <span className="inline-flex items-center justify-center rounded-full bg-amber-100 text-amber-700 px-4 py-2 text-sm font-semibold">
+                      {courses[selectedCourse].status}
+                    </span>
+                  )}
+                </div>
                 <p className="text-3xl font-bold text-red-700">{courses[selectedCourse].price}</p>
               </div>
 
