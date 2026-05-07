@@ -1,10 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const [showForm, setShowForm] = useState(false);
+  const [showFloatingBanners, setShowFloatingBanners] = useState(true);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -96,6 +97,11 @@ export default function Home() {
     setShowForm(true);
   };
 
+  useEffect(() => {
+    const timer = window.setTimeout(() => setShowFloatingBanners(false), 6000);
+    return () => window.clearTimeout(timer);
+  }, []);
+
   const handleSubmit = () => {
     if (
       !formData.name ||
@@ -180,6 +186,28 @@ export default function Home() {
       <section className="relative overflow-hidden bg-gradient-to-br from-red-700 via-orange-500 to-orange-100 py-24 px-6">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(254,71,41,0.18),_transparent_25%),radial-gradient(circle_at_bottom_right,_rgba(251,146,60,0.18),_transparent_25%)]" />
         <div className="relative z-10 flex flex-col items-center justify-center text-center">
+          {showFloatingBanners && (
+            <div className="pointer-events-none absolute inset-x-0 top-0 mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 md:px-0">
+              <div className="rounded-3xl border border-white/20 bg-white/15 px-5 py-4 text-left text-sm text-white shadow-xl backdrop-blur-lg transition-all duration-500 animate-[float_6s_ease-in-out_infinite]">
+                <p className="uppercase tracking-[0.28em] text-orange-100 font-semibold">New Launch</p>
+                <p className="mt-2 font-bold text-lg">Maths Summer Mental Ability</p>
+                <p className="mt-1 text-xs text-orange-100/90">30 min daily • 1 worksheet daily</p>
+              </div>
+
+              <div className="rounded-3xl border border-white/20 bg-white/15 px-5 py-4 text-left text-sm text-white shadow-xl backdrop-blur-lg transition-all duration-500 animate-[float_6s_ease-in-out_infinite_0.4s]">
+                <p className="uppercase tracking-[0.28em] text-orange-100 font-semibold">Boost Speed</p>
+                <p className="mt-2 font-bold text-lg">Mental Growth & Quick Maths</p>
+                <p className="mt-1 text-xs text-orange-100/90">Best approach for fast results</p>
+              </div>
+
+              <div className="rounded-3xl border border-white/20 bg-white/15 px-5 py-4 text-left text-sm text-white shadow-xl backdrop-blur-lg transition-all duration-500 animate-[float_6s_ease-in-out_infinite_0.8s]">
+                <p className="uppercase tracking-[0.28em] text-orange-100 font-semibold">Limited Time</p>
+                <p className="mt-2 font-bold text-lg">Master Math in 30 Days</p>
+                <p className="mt-1 text-xs text-orange-100/90">Launching soon for grades 6-10</p>
+              </div>
+            </div>
+          )}
+
           <p className="mb-6 inline-flex rounded-full border border-white/30 bg-white/15 px-4 py-2 text-sm uppercase tracking-[0.3em] text-white">
             Premium Maths Academy
           </p>
