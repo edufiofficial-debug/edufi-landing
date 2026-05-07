@@ -262,16 +262,23 @@ export default function Home() {
               <p className="text-sm uppercase tracking-[0.24em] text-red-600 font-semibold mb-3">
                 Select a Course
               </p>
-              <select
-                value={selectedCourse}
-                onChange={(e) => setSelectedCourse(e.target.value as "concepts" | "problemsolving" | "homework" | "mentalability")}
-                className="w-full appearance-none rounded-xl border-2 border-red-200 bg-white px-4 py-3 text-lg font-semibold text-slate-950 transition-all duration-300 focus:border-red-600 focus:outline-none focus:ring-2 focus:ring-red-200 cursor-pointer"
-              >
-                <option value="concepts">Concepts + Classwork (Maths Mastery)</option>
-                <option value="problemsolving">Problem Solving (Reasoning Edge)</option>
-                <option value="homework">Homework & Revision (Foundation Support)</option>
-                <option value="mentalability">Maths Summer Mental Ability (Summer Intensive)</option>
-              </select>
+              <div className="relative">
+                <select
+                  value={selectedCourse}
+                  onChange={(e) => setSelectedCourse(e.target.value as "concepts" | "problemsolving" | "homework" | "mentalability")}
+                  className="w-full appearance-none rounded-xl border-2 border-red-200 bg-white px-4 py-3 pr-12 text-lg font-semibold text-slate-950 transition-all duration-300 focus:border-red-600 focus:outline-none focus:ring-2 focus:ring-red-200 cursor-pointer"
+                >
+                  <option value="concepts">Concepts + Classwork (Maths Mastery)</option>
+                  <option value="problemsolving">Problem Solving (Reasoning Edge)</option>
+                  <option value="homework">Homework & Revision (Foundation Support)</option>
+                  <option value="mentalability">Maths Summer Mental Ability (Summer Intensive)</option>
+                </select>
+                <span className="pointer-events-none absolute inset-y-0 right-4 flex items-center text-red-600">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5">
+                    <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z" clipRule="evenodd" />
+                  </svg>
+                </span>
+              </div>
             </label>
 
             <div className="rounded-[1.75rem] border border-orange-200 bg-gradient-to-br from-orange-50 to-red-50 p-8 transition-all duration-300">
