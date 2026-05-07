@@ -91,6 +91,17 @@ export default function Home() {
     }));
   };
 
+  const selectCourseByGrade = (grade: string) => {
+    const mapping: Record<string, "concepts" | "problemsolving" | "homework" | "mentalability"> = {
+      "6th": "concepts",
+      "7th": "concepts",
+      "8th": "homework",
+      "9th": "problemsolving",
+      "10th": "mentalability",
+    };
+    return mapping[grade] ?? "concepts";
+  };
+
   const generateCoupon = () => {
     const code = `EDUFI50-${Math.random().toString(36).substring(2, 8).toUpperCase()}`;
     setCouponCode(code);
@@ -362,6 +373,60 @@ export default function Home() {
                 </ul>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CLASSWISE COURSES */}
+      <section className="bg-white py-20 px-6">
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <p className="text-sm uppercase tracking-[0.24em] text-red-600 font-semibold">
+              Classwise Course Plans
+            </p>
+            <h2 className="text-4xl font-bold mt-3 text-slate-950">
+              Maths classes for grades 6 to 10
+            </h2>
+            <p className="mt-4 text-slate-600 max-w-2xl mx-auto">
+              Grade-specific course pathways designed for stronger fundamentals and faster progress.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-5">
+            {['6th', '7th', '8th', '9th', '10th'].map((grade) => {
+              const matchedCourse = selectCourseByGrade(grade);
+              const isSelected = selectedCourse === matchedCourse;
+              return (
+                <div
+                  key={grade}
+                  className={`rounded-[2rem] p-6 text-center transition-all duration-300 ${isSelected ? 'border-2 border-red-700 bg-white shadow-[0_25px_90px_rgba(220,38,38,0.25)] scale-[1.01]' : 'border border-red-100 bg-red-50 shadow-[0_20px_60px_rgba(251,146,60,0.12)]'}`}
+                >
+                  <p className={`text-sm uppercase tracking-[0.24em] font-semibold ${isSelected ? 'text-red-800' : 'text-red-700'}`}>
+                    Grade {grade}
+                  </p>
+                  <p className="mt-4 text-2xl font-bold text-slate-950">
+                    Focused Maths
+                  </p>
+                  <p className="mt-3 text-slate-600 text-sm">
+                    Class-specific lessons, daily practice, and exam-style questions.
+                  </p>
+                  <ul className="mt-6 space-y-3 text-slate-600 text-left text-sm">
+                    <li>• Chapter-wise concept clarity</li>
+                    <li>• Practice worksheet every day</li>
+                    <li>• Speed and accuracy training</li>
+                  </ul>
+                  <button
+                    onClick={() => {
+                      setSelectedCourse(matchedCourse);
+                      setShowForm(true);
+                    }}
+                    className="mt-6 rounded-2xl bg-red-700 px-4 py-3 text-sm font-semibold text-white transition hover:bg-red-800"
+                  >
+                    Enroll Grade {grade}
+                  </button>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
