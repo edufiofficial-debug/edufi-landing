@@ -53,95 +53,153 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-yellow-50 to-white text-black">
+    <main className="min-h-screen bg-slate-950 text-slate-100">
 
       {/* HERO SECTION */}
-      <section className="flex flex-col items-center justify-center text-center py-24 px-6">
+      <section className="relative overflow-hidden bg-slate-950 py-24 px-6">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(245,158,11,0.18),_transparent_25%),radial-gradient(circle_at_bottom_right,_rgba(59,130,246,0.18),_transparent_25%)]" />
+        <div className="relative z-10 flex flex-col items-center justify-center text-center">
+          <p className="mb-6 inline-flex rounded-full border border-amber-300/30 bg-slate-900/80 px-4 py-2 text-sm uppercase tracking-[0.3em] text-amber-200">
+            Premium Maths Academy
+          </p>
 
-        <h1 className="text-5xl md:text-6xl font-extrabold leading-tight">
-          Maths Foundation for <br />
-          Grades 6th–10th 🚀
-        </h1>
+          <h1 className="text-5xl md:text-6xl font-extrabold leading-tight tracking-tight text-white">
+            Maths Foundation for <br />
+            Grades 6th–10th
+          </h1>
 
-        <p className="mt-6 text-lg text-gray-700 max-w-2xl">
-          India’s smartest platform for building strong maths foundations from
-          6th to 10th grade.
-        </p>
+          <p className="mt-6 text-lg text-slate-300 max-w-2xl">
+            India’s most premium platform for building strong maths foundations,
+            confidence, and classroom success.
+          </p>
 
-        <button
-          onClick={() => setShowForm(true)}
-          className="mt-8 bg-blue-600 hover:bg-blue-700 transition-all duration-300 text-white px-8 py-4 rounded-2xl text-lg font-semibold shadow-lg"
-        >
-          Join Maths Foundation
-        </button>
+          <button
+            onClick={() => setShowForm(true)}
+            className="mt-8 bg-amber-500 hover:bg-amber-400 transition-all duration-300 text-slate-950 px-8 py-4 rounded-2xl text-lg font-semibold shadow-[0_20px_60px_rgba(249,115,22,0.25)]"
+          >
+            Join Maths Foundation
+          </button>
+        </div>
       </section>
 
-      {/* COURSES SECTION */}
-      <section className="bg-white py-20 px-6">
+      {/* COURSES & PRICING SECTION */}
+      <section className="bg-slate-900 py-20 px-6">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-12">
-            <p className="text-sm uppercase tracking-[0.24em] text-blue-600 font-semibold">
+            <p className="text-sm uppercase tracking-[0.24em] text-amber-300 font-semibold">
               Courses
             </p>
-            <h2 className="text-4xl font-bold mt-3">
+            <h2 className="text-4xl font-bold mt-3 text-white">
               Build a strong maths foundation for 6th–10th
             </h2>
-            <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-              Structured classes, live doubt solving, and focused practice for middle and high school maths.
+            <p className="mt-4 text-slate-300 max-w-2xl mx-auto">
+              Structured classes, live doubt solving, and focused practice for school maths.
             </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-3">
-            <div className="border border-gray-200 rounded-3xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300">
-              <span className="inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-700 px-4 py-2 text-sm font-semibold">
+            <div className="rounded-[2rem] border border-slate-700 bg-slate-800 p-8 shadow-[0_24px_80px_rgba(15,23,42,0.35)] transition-all duration-300 hover:-translate-y-1">
+              <span className="inline-flex items-center justify-center rounded-full bg-amber-100 text-amber-900 px-4 py-2 text-sm font-semibold">
                 Maths Mastery
               </span>
-              <h3 className="mt-6 text-2xl font-semibold">Concepts + Classwork</h3>
-              <p className="mt-4 text-gray-600">
-                Build confidence in arithmetic, algebra, geometry, and number sense with strong textbook-aligned lessons.
+              <h3 className="mt-6 text-2xl font-semibold text-white">Concepts + Classwork</h3>
+              <p className="mt-4 text-slate-300">
+                Build confidence in arithmetic, algebra, geometry, and number sense with textbook-aligned lessons.
               </p>
             </div>
 
-            <div className="border border-gray-200 rounded-3xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300">
-              <span className="inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-700 px-4 py-2 text-sm font-semibold">
+            <div className="rounded-[2rem] border border-slate-700 bg-slate-800 p-8 shadow-[0_24px_80px_rgba(15,23,42,0.35)] transition-all duration-300 hover:-translate-y-1">
+              <span className="inline-flex items-center justify-center rounded-full bg-amber-100 text-amber-900 px-4 py-2 text-sm font-semibold">
                 Reasoning Edge
               </span>
-              <h3 className="mt-6 text-2xl font-semibold">Problem Solving</h3>
-              <p className="mt-4 text-gray-600">
+              <h3 className="mt-6 text-2xl font-semibold text-white">Problem Solving</h3>
+              <p className="mt-4 text-slate-300">
                 Strengthen logical thinking and word-problem skills with step-by-step practice for school maths.
               </p>
             </div>
 
-            <div className="border border-gray-200 rounded-3xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300">
-              <span className="inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-700 px-4 py-2 text-sm font-semibold">
+            <div className="rounded-[2rem] border border-slate-700 bg-slate-800 p-8 shadow-[0_24px_80px_rgba(15,23,42,0.35)] transition-all duration-300 hover:-translate-y-1">
+              <span className="inline-flex items-center justify-center rounded-full bg-amber-100 text-amber-900 px-4 py-2 text-sm font-semibold">
                 Foundation Support
               </span>
-              <h3 className="mt-6 text-2xl font-semibold">Homework & Revision</h3>
-              <p className="mt-4 text-gray-600">
+              <h3 className="mt-6 text-2xl font-semibold text-white">Homework & Revision</h3>
+              <p className="mt-4 text-slate-300">
                 Regular quizzes, revision sessions, and homework help to keep your maths fundamentals strong.
               </p>
+            </div>
+          </div>
+
+          <div className="mt-16 rounded-[2rem] border border-slate-800 bg-slate-950/95 p-8 shadow-[0_24px_80px_rgba(15,23,42,0.5)]">
+            <div className="text-center mb-10">
+              <p className="text-sm uppercase tracking-[0.24em] text-amber-300 font-semibold">
+                Pricing
+              </p>
+              <h3 className="text-3xl md:text-4xl font-bold text-white">
+                Choose the right maths plan
+              </h3>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-3">
+              <div className="rounded-[1.75rem] border border-slate-700 bg-slate-900 p-8 text-center shadow-[0_20px_60px_rgba(15,23,42,0.25)]">
+                <p className="text-sm uppercase tracking-[0.24em] text-amber-300 font-semibold">
+                  Starter
+                </p>
+                <p className="mt-6 text-5xl font-bold text-white">₹999</p>
+                <p className="text-slate-400">/ month</p>
+                <ul className="mt-6 space-y-3 text-slate-300 text-left">
+                  <li>• Core maths lessons</li>
+                  <li>• Weekly practice tests</li>
+                  <li>• Doubt support</li>
+                </ul>
+              </div>
+
+              <div className="rounded-[1.75rem] border border-amber-400 bg-slate-900 p-8 text-center shadow-[0_20px_60px_rgba(249,115,22,0.25)]">
+                <p className="text-sm uppercase tracking-[0.24em] text-amber-200 font-semibold">
+                  Popular
+                </p>
+                <p className="mt-6 text-5xl font-bold text-white">₹2,499</p>
+                <p className="text-slate-400">/ quarter</p>
+                <ul className="mt-6 space-y-3 text-slate-300 text-left">
+                  <li>• Live doubt sessions</li>
+                  <li>• Revision workshops</li>
+                  <li>• Progress reports</li>
+                </ul>
+              </div>
+
+              <div className="rounded-[1.75rem] border border-slate-700 bg-slate-900 p-8 text-center shadow-[0_20px_60px_rgba(15,23,42,0.25)]">
+                <p className="text-sm uppercase tracking-[0.24em] text-amber-300 font-semibold">
+                  Complete
+                </p>
+                <p className="mt-6 text-5xl font-bold text-white">₹7,999</p>
+                <p className="text-slate-400">/ year</p>
+                <ul className="mt-6 space-y-3 text-slate-300 text-left">
+                  <li>• Year-round maths support</li>
+                  <li>• Full curriculum coverage</li>
+                  <li>• Premium student guidance</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* STUDENT PHOTOS */}
-      <section className="bg-slate-50 py-20 px-6">
+      <section className="bg-[#060915] py-20 px-6">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-12">
-            <p className="text-sm uppercase tracking-[0.24em] text-slate-600 font-semibold">
+            <p className="text-sm uppercase tracking-[0.24em] text-amber-300 font-semibold">
               Student Stories
             </p>
-            <h2 className="text-4xl font-bold mt-3">
+            <h2 className="text-4xl font-bold mt-3 text-white">
               Our students in action
             </h2>
-            <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+            <p className="mt-4 text-slate-400 max-w-2xl mx-auto">
               Real learners sharing progress, confidence, and the energy of classroom success.
             </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-3 items-start">
-            <div className="rounded-3xl overflow-hidden bg-white shadow-sm">
+            <div className="rounded-[2rem] overflow-hidden bg-slate-900 shadow-[0_24px_80px_rgba(15,23,42,0.4)]">
               <div className="relative h-80 w-full">
                 <Image
                   src="/student1.jpg"
@@ -150,15 +208,15 @@ export default function Home() {
                   className="object-cover"
                 />
               </div>
-              <div className="p-6">
-                <p className="font-semibold text-lg">Ananya</p>
-                <p className="mt-2 text-gray-600">
-                  "The live doubt sessions helped me clear every concept quickly and confidently."
+              <div className="space-y-3 bg-slate-950 p-6">
+                <p className="font-semibold text-lg text-white">Ananya — Grade 8</p>
+                <p className="text-slate-400">
+                  "The doubt sessions helped me clear every concept quickly and confidently."
                 </p>
               </div>
             </div>
 
-            <div className="rounded-3xl overflow-hidden bg-white shadow-sm">
+            <div className="rounded-[2rem] overflow-hidden bg-slate-900 shadow-[0_24px_80px_rgba(15,23,42,0.4)]">
               <div className="relative h-80 w-full">
                 <Image
                   src="/student2.jpg"
@@ -167,15 +225,15 @@ export default function Home() {
                   className="object-cover"
                 />
               </div>
-              <div className="p-6">
-                <p className="font-semibold text-lg">Rohan</p>
-                <p className="mt-2 text-gray-600">
-                  "Focused practice and personalised guidance gave me the confidence I needed."
+              <div className="space-y-3 bg-slate-950 p-6">
+                <p className="font-semibold text-lg text-white">Rohan — Grade 9</p>
+                <p className="text-slate-400">
+                  "Focused practice and guidance gave me the confidence I needed."
                 </p>
               </div>
             </div>
 
-            <div className="rounded-3xl overflow-hidden bg-white shadow-sm">
+            <div className="rounded-[2rem] overflow-hidden bg-slate-900 shadow-[0_24px_80px_rgba(15,23,42,0.4)]">
               <div className="relative h-80 w-full">
                 <Image
                   src="/student3.jpg"
@@ -184,9 +242,9 @@ export default function Home() {
                   className="object-cover"
                 />
               </div>
-              <div className="p-6">
-                <p className="font-semibold text-lg">Priya</p>
-                <p className="mt-2 text-gray-600">
+              <div className="space-y-3 bg-slate-950 p-6">
+                <p className="font-semibold text-lg text-white">Priya — Grade 10</p>
+                <p className="text-slate-400">
                   "Learning with Edufi made preparation efficient and exam-ready in weeks."
                 </p>
               </div>
