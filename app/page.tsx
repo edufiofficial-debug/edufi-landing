@@ -53,10 +53,18 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-white text-slate-950">
+    <main className="min-h-screen bg-gradient-to-br from-red-700 via-orange-500 to-orange-100 text-slate-950">
+
+      <div className="bg-red-950/95 text-white py-3 text-center text-sm tracking-[0.18em] uppercase">
+        <span className="font-semibold">Edufi Classes</span>
+        <span className="mx-2 hidden sm:inline">•</span>
+        <span>
+          Contact on WhatsApp: <a href="https://wa.me/919501941186" className="font-semibold underline decoration-white/70 underline-offset-2">9501941186</a>
+        </span>
+      </div>
 
       {/* HERO SECTION */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-red-700 via-orange-500 to-white py-24 px-6">
+      <section className="relative overflow-hidden bg-gradient-to-br from-red-700 via-orange-500 to-orange-100 py-24 px-6">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(254,71,41,0.18),_transparent_25%),radial-gradient(circle_at_bottom_right,_rgba(251,146,60,0.18),_transparent_25%)]" />
         <div className="relative z-10 flex flex-col items-center justify-center text-center">
           <p className="mb-6 inline-flex rounded-full border border-white/30 bg-white/15 px-4 py-2 text-sm uppercase tracking-[0.3em] text-white">
@@ -83,7 +91,7 @@ export default function Home() {
       </section>
 
       {/* COURSES & PRICING SECTION */}
-      <section className="bg-white py-20 px-6">
+      <section className="bg-red-50 py-20 px-6">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <p className="text-sm uppercase tracking-[0.24em] text-red-600 font-semibold">
@@ -98,7 +106,7 @@ export default function Home() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-3">
-            <div className="rounded-[2rem] border border-red-100 bg-white p-8 shadow-[0_24px_80px_rgba(251,146,60,0.12)] transition-all duration-300 hover:-translate-y-1">
+            <div className="rounded-[2rem] border border-red-100 bg-red-50 p-8 shadow-[0_24px_80px_rgba(251,146,60,0.12)] transition-all duration-300 hover:-translate-y-1">
               <span className="inline-flex items-center justify-center rounded-full bg-red-100 text-red-700 px-4 py-2 text-sm font-semibold">
                 Maths Mastery
               </span>
@@ -108,7 +116,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="rounded-[2rem] border border-orange-100 bg-white p-8 shadow-[0_24px_80px_rgba(251,146,60,0.12)] transition-all duration-300 hover:-translate-y-1">
+            <div className="rounded-[2rem] border border-orange-100 bg-orange-50 p-8 shadow-[0_24px_80px_rgba(251,146,60,0.12)] transition-all duration-300 hover:-translate-y-1">
               <span className="inline-flex items-center justify-center rounded-full bg-orange-100 text-orange-700 px-4 py-2 text-sm font-semibold">
                 Reasoning Edge
               </span>
@@ -118,7 +126,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="rounded-[2rem] border border-red-100 bg-white p-8 shadow-[0_24px_80px_rgba(251,146,60,0.12)] transition-all duration-300 hover:-translate-y-1">
+            <div className="rounded-[2rem] border border-red-100 bg-red-50 p-8 shadow-[0_24px_80px_rgba(251,146,60,0.12)] transition-all duration-300 hover:-translate-y-1">
               <span className="inline-flex items-center justify-center rounded-full bg-red-100 text-red-700 px-4 py-2 text-sm font-semibold">
                 Foundation Support
               </span>
@@ -129,9 +137,9 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-16 rounded-[2rem] border border-red-100 bg-red-50/70 p-8 shadow-[0_24px_80px_rgba(251,146,60,0.18)]">
+          <div className="mt-16 rounded-[2rem] border border-red-100 bg-red-100/80 p-8 shadow-[0_24px_80px_rgba(251,146,60,0.18)]">
             <div className="text-center mb-10">
-              <p className="text-sm uppercase tracking-[0.24em] text-red-600 font-semibold">
+              <p className="text-sm uppercase tracking-[0.24em] text-red-700 font-semibold">
                 Pricing
               </p>
               <h3 className="text-3xl md:text-4xl font-bold text-slate-950">
@@ -140,7 +148,7 @@ export default function Home() {
             </div>
 
             <div className="grid gap-6 md:grid-cols-3">
-              <div className="rounded-[1.75rem] border border-red-200 bg-white p-8 text-center shadow-[0_20px_60px_rgba(251,146,60,0.18)]">
+              <div className="rounded-[1.75rem] border border-red-200 bg-red-50 p-8 text-center shadow-[0_20px_60px_rgba(251,146,60,0.18)]">
                 <p className="text-sm uppercase tracking-[0.24em] text-red-600 font-semibold">
                   Starter
                 </p>
@@ -153,7 +161,7 @@ export default function Home() {
                 </ul>
               </div>
 
-              <div className="rounded-[1.75rem] border border-orange-300 bg-white p-8 text-center shadow-[0_20px_60px_rgba(251,146,60,0.18)]">
+              <div className="rounded-[1.75rem] border border-orange-300 bg-orange-50 p-8 text-center shadow-[0_20px_60px_rgba(251,146,60,0.18)]">
                 <p className="text-sm uppercase tracking-[0.24em] text-orange-600 font-semibold">
                   Popular
                 </p>
@@ -166,7 +174,7 @@ export default function Home() {
                 </ul>
               </div>
 
-              <div className="rounded-[1.75rem] border border-red-200 bg-white p-8 text-center shadow-[0_20px_60px_rgba(251,146,60,0.18)]">
+              <div className="rounded-[1.75rem] border border-red-200 bg-red-50 p-8 text-center shadow-[0_20px_60px_rgba(251,146,60,0.18)]">
                 <p className="text-sm uppercase tracking-[0.24em] text-red-600 font-semibold">
                   Complete
                 </p>
@@ -184,7 +192,7 @@ export default function Home() {
       </section>
 
       {/* STUDENT PHOTOS */}
-      <section className="bg-orange-50 py-20 px-6">
+      <section className="bg-red-50 py-20 px-6">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <p className="text-sm uppercase tracking-[0.24em] text-red-600 font-semibold">
@@ -199,7 +207,7 @@ export default function Home() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-3 items-start">
-            <div className="rounded-[2rem] overflow-hidden bg-white shadow-[0_24px_80px_rgba(251,146,60,0.18)]">
+            <div className="rounded-[2rem] overflow-hidden bg-red-50 shadow-[0_24px_80px_rgba(251,146,60,0.18)]">
               <div className="relative h-80 w-full">
                 <Image
                   src="/student1.jpg"
@@ -216,7 +224,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="rounded-[2rem] overflow-hidden bg-white shadow-[0_24px_80px_rgba(251,146,60,0.18)]">
+            <div className="rounded-[2rem] overflow-hidden bg-red-50 shadow-[0_24px_80px_rgba(251,146,60,0.18)]">
               <div className="relative h-80 w-full">
                 <Image
                   src="/student2.jpg"
@@ -225,7 +233,7 @@ export default function Home() {
                   className="object-cover"
                 />
               </div>
-              <div className="space-y-3 bg-white p-6">
+              <div className="space-y-3 bg-red-50 p-6">
                 <p className="font-semibold text-lg text-red-700">Rohan — Grade 9</p>
                 <p className="text-slate-600">
                   "Focused practice and guidance gave me the confidence I needed."
@@ -233,7 +241,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="rounded-[2rem] overflow-hidden bg-white shadow-[0_24px_80px_rgba(251,146,60,0.18)]">
+            <div className="rounded-[2rem] overflow-hidden bg-red-50 shadow-[0_24px_80px_rgba(251,146,60,0.18)]">
               <div className="relative h-80 w-full">
                 <Image
                   src="/student3.jpg"
@@ -242,7 +250,7 @@ export default function Home() {
                   className="object-cover"
                 />
               </div>
-              <div className="space-y-3 bg-white p-6">
+              <div className="space-y-3 bg-red-50 p-6">
                 <p className="font-semibold text-lg text-red-700">Priya — Grade 10</p>
                 <p className="text-slate-600">
                   "Learning with Edufi made preparation efficient and exam-ready in weeks."
