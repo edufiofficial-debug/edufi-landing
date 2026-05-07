@@ -98,7 +98,7 @@ export default function Home() {
   };
 
   useEffect(() => {
-    const timer = window.setTimeout(() => setShowFloatingBanners(false), 6000);
+    const timer = window.setTimeout(() => setShowFloatingBanners(false), 5000);
     return () => window.clearTimeout(timer);
   }, []);
 
@@ -188,22 +188,22 @@ export default function Home() {
         <div className="relative z-10 flex flex-col items-center justify-center text-center">
           {showFloatingBanners && (
             <div className="pointer-events-none absolute inset-x-0 top-0 mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 md:px-0">
-              <div className="rounded-3xl border border-white/20 bg-white/15 px-5 py-4 text-left text-sm text-white shadow-xl backdrop-blur-lg transition-all duration-500 animate-[float_6s_ease-in-out_infinite]">
-                <p className="uppercase tracking-[0.28em] text-orange-100 font-semibold">New Launch</p>
+              <div className="rounded-3xl border border-red-200 bg-red-600/95 px-5 py-4 text-left text-sm text-white shadow-xl backdrop-blur-lg transition-all duration-500 animate-[float_5s_ease-in-out_infinite]">
+                <p className="uppercase tracking-[0.28em] text-orange-200 font-semibold">New Launch</p>
                 <p className="mt-2 font-bold text-lg">Maths Summer Mental Ability</p>
-                <p className="mt-1 text-xs text-orange-100/90">30 min daily • 1 worksheet daily</p>
+                <p className="mt-1 text-xs text-orange-200/95">30 min daily • 1 worksheet daily</p>
               </div>
 
-              <div className="rounded-3xl border border-white/20 bg-white/15 px-5 py-4 text-left text-sm text-white shadow-xl backdrop-blur-lg transition-all duration-500 animate-[float_6s_ease-in-out_infinite_0.4s]">
-                <p className="uppercase tracking-[0.28em] text-orange-100 font-semibold">Boost Speed</p>
+              <div className="rounded-3xl border border-orange-200 bg-orange-500/95 px-5 py-4 text-left text-sm text-white shadow-xl backdrop-blur-lg transition-all duration-500 animate-[float_5s_ease-in-out_infinite_0.4s]">
+                <p className="uppercase tracking-[0.28em] text-white/90 font-semibold">Boost Speed</p>
                 <p className="mt-2 font-bold text-lg">Mental Growth & Quick Maths</p>
-                <p className="mt-1 text-xs text-orange-100/90">Best approach for fast results</p>
+                <p className="mt-1 text-xs text-white/90">Best approach for fast results</p>
               </div>
 
-              <div className="rounded-3xl border border-white/20 bg-white/15 px-5 py-4 text-left text-sm text-white shadow-xl backdrop-blur-lg transition-all duration-500 animate-[float_6s_ease-in-out_infinite_0.8s]">
-                <p className="uppercase tracking-[0.28em] text-orange-100 font-semibold">Limited Time</p>
+              <div className="rounded-3xl border border-amber-200 bg-amber-500/95 px-5 py-4 text-left text-sm text-white shadow-xl backdrop-blur-lg transition-all duration-500 animate-[float_5s_ease-in-out_infinite_0.8s]">
+                <p className="uppercase tracking-[0.28em] text-red-900 font-semibold">Limited Time</p>
                 <p className="mt-2 font-bold text-lg">Master Math in 30 Days</p>
-                <p className="mt-1 text-xs text-orange-100/90">Launching soon for grades 6-10</p>
+                <p className="mt-1 text-xs text-red-900/90">Launching soon for grades 6-10</p>
               </div>
             </div>
           )}
