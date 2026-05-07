@@ -234,7 +234,9 @@ export default function Home() {
           </p>
 
           <button
-            onClick={() => setShowForm(true)}
+            onClick={() =>
+  window.open("https://rlqyso.courses.store/842135?utm_source%3Dother%26utm_medium%3Dtutor-course-referral%26utm_campaign%3Dcourse-overview-webapp", "_blank")
+}
             className="mt-8 bg-white text-red-700 hover:bg-slate-100 transition-all duration-300 px-8 py-4 rounded-2xl text-lg font-semibold shadow-[0_20px_60px_rgba(251,146,60,0.25)]"
           >
             Join Maths Foundation
@@ -322,7 +324,9 @@ export default function Home() {
               </div>
 
               <button
-                onClick={() => setShowForm(true)}
+                onClick={() =>
+  window.open("https://rlqyso.courses.store/842135?utm_source%3Dother%26utm_medium%3Dtutor-course-referral%26utm_campaign%3Dcourse-overview-webapp", "_blank")
+}
                 className="w-full rounded-xl bg-red-700 px-6 py-4 text-center text-lg font-semibold text-white transition-all duration-300 hover:bg-red-800 shadow-[0_10px_30px_rgba(220,38,38,0.2)]"
               >
                 Enroll in {courses[selectedCourse].title}
