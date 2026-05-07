@@ -220,7 +220,7 @@ export default function Home() {
           )}
 
           <p className="mb-6 inline-flex rounded-full border border-white/30 bg-white/15 px-4 py-2 text-sm uppercase tracking-[0.3em] text-white">
-            Premium Maths Academy
+            Edufi Classes Hisar
           </p>
 
           <h1 className="text-5xl md:text-6xl font-extrabold leading-tight tracking-tight text-white">
