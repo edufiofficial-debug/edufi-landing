@@ -59,20 +59,20 @@ export default function Home() {
       <section className="flex flex-col items-center justify-center text-center py-24 px-6">
 
         <h1 className="text-5xl md:text-6xl font-extrabold leading-tight">
-          Crack SSC CGL <br />
-          Maths & Reasoning 🚀
+          Maths Foundation for <br />
+          Grades 6th–10th 🚀
         </h1>
 
         <p className="mt-6 text-lg text-gray-700 max-w-2xl">
-          India’s smartest preparation platform for SSC CGL,
-          DSSSB & Government Exams.
+          India’s smartest platform for building strong maths foundations from
+          6th to 10th grade.
         </p>
 
         <button
           onClick={() => setShowForm(true)}
           className="mt-8 bg-blue-600 hover:bg-blue-700 transition-all duration-300 text-white px-8 py-4 rounded-2xl text-lg font-semibold shadow-lg"
         >
-          Enroll Now
+          Join Maths Foundation
         </button>
       </section>
 
@@ -84,10 +84,10 @@ export default function Home() {
               Courses
             </p>
             <h2 className="text-4xl font-bold mt-3">
-              Learn from the best for every exam stage
+              Build a strong maths foundation for 6th–10th
             </h2>
             <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-              Structured classes, live doubt solving, and focused practice for SSC CGL, DSSSB, and all competitive exams.
+              Structured classes, live doubt solving, and focused practice for middle and high school maths.
             </p>
           </div>
 
@@ -96,9 +96,9 @@ export default function Home() {
               <span className="inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-700 px-4 py-2 text-sm font-semibold">
                 Maths Mastery
               </span>
-              <h3 className="mt-6 text-2xl font-semibold">Concepts + Tricks</h3>
+              <h3 className="mt-6 text-2xl font-semibold">Concepts + Classwork</h3>
               <p className="mt-4 text-gray-600">
-                Build speed and accuracy with topic-by-topic coaching for arithmetic, algebra, geometry, and data interpretation.
+                Build confidence in arithmetic, algebra, geometry, and number sense with strong textbook-aligned lessons.
               </p>
             </div>
 
@@ -106,19 +106,19 @@ export default function Home() {
               <span className="inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-700 px-4 py-2 text-sm font-semibold">
                 Reasoning Edge
               </span>
-              <h3 className="mt-6 text-2xl font-semibold">Logical Ability</h3>
+              <h3 className="mt-6 text-2xl font-semibold">Problem Solving</h3>
               <p className="mt-4 text-gray-600">
-                Develop strong reasoning skills with puzzles, visual reasoning, and exam-style practice for fast results.
+                Strengthen logical thinking and word-problem skills with step-by-step practice for school maths.
               </p>
             </div>
 
             <div className="border border-gray-200 rounded-3xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300">
               <span className="inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-700 px-4 py-2 text-sm font-semibold">
-                Exam Readiness
+                Foundation Support
               </span>
-              <h3 className="mt-6 text-2xl font-semibold">Full Test Practice</h3>
+              <h3 className="mt-6 text-2xl font-semibold">Homework & Revision</h3>
               <p className="mt-4 text-gray-600">
-                Regular full-length mock tests, performance reviews, and personal feedback to keep you exam-ready.
+                Regular quizzes, revision sessions, and homework help to keep your maths fundamentals strong.
               </p>
             </div>
           </div>
@@ -210,7 +210,7 @@ export default function Home() {
             </button>
 
             <h2 className="text-3xl font-bold mb-2">
-              Enquiry Form
+              Join Maths Foundation
             </h2>
 
             <p className="text-gray-600 mb-6">
@@ -251,7 +251,7 @@ export default function Home() {
               onClick={handleSubmit}
               className="w-full bg-green-500 hover:bg-green-600 transition-all duration-300 text-white py-3 rounded-xl text-lg font-semibold"
             >
-              Submit on WhatsApp
+              Join Now
             </button>
 
           </div>
