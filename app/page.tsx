@@ -70,9 +70,11 @@ export default function Home() {
         </span>
       </div>
 
-      <section className="bg-red-700 text-white py-4 px-6">
-        <div className="mx-auto flex flex-col gap-3 items-center justify-between text-center md:flex-row md:text-left md:gap-0 md:items-center max-w-6xl">
+      <section className="relative overflow-hidden bg-red-700 text-white py-4 px-6 border-b-4 border-orange-300/70">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.18),transparent_15%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.12),transparent_20%)]" />
+        <div className="relative mx-auto flex flex-col gap-3 items-center justify-between text-center md:flex-row md:text-left md:gap-0 md:items-center max-w-6xl">
           <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-orange-100/90">Exclusive launch</p>
             <p className="text-lg font-bold tracking-[0.1em] uppercase">50% OFF Limited Offer</p>
             <p className="text-sm text-orange-100 mt-1">
               Click now to join and grab your exclusive coupon.
@@ -81,7 +83,7 @@ export default function Home() {
 
           <button
             onClick={generateCoupon}
-            className="rounded-full bg-white px-6 py-3 text-red-700 font-semibold transition-all duration-300 hover:bg-orange-100"
+            className="relative overflow-hidden rounded-full bg-white px-6 py-3 text-red-700 font-semibold transition-all duration-300 shadow-[0_0_40px_rgba(255,255,255,0.35)] hover:bg-orange-100 hover:text-red-900 focus:outline-none focus:ring-4 focus:ring-white/40 animate-pulse"
           >
             Click Now to Join
           </button>
@@ -90,11 +92,13 @@ export default function Home() {
 
       {couponCode && (
         <section className="bg-orange-50 py-6 px-6">
-          <div className="mx-auto max-w-6xl rounded-[1.75rem] border border-orange-200 bg-white p-6 text-center shadow-[0_20px_60px_rgba(251,146,60,0.12)]">
+          <div className="mx-auto max-w-6xl rounded-[1.75rem] border border-orange-200 bg-gradient-to-br from-white via-orange-50 to-orange-100 p-6 text-center shadow-[0_20px_80px_rgba(251,146,60,0.18)] ring-1 ring-orange-200/80 animate-pulse">
             <p className="text-sm uppercase tracking-[0.24em] text-red-600 font-semibold">
               Coupon Generated
             </p>
-            <p className="mt-3 text-3xl font-bold text-red-700">{couponCode}</p>
+            <p className="mt-3 inline-flex items-center justify-center rounded-full bg-red-700 px-6 py-3 text-3xl font-bold text-white shadow-[0_15px_40px_rgba(220,38,38,0.35)]">
+              {couponCode}
+            </p>
             <p className="mt-3 text-slate-600">
               Use this code for 50% off when you join via WhatsApp.
             </p>
