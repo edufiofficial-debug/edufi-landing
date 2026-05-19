@@ -311,108 +311,110 @@ Coupon Code: FN100`;
       </section>
 
       {/* STUDENT PHOTOS */}
-      <section className="bg-white px-6 py-20">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-14 text-center">
-            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#0B66C3]">
-              Edufi Classes
+<section className="bg-white px-4 py-16 md:px-6 md:py-20">
+  <div className="mx-auto max-w-7xl">
+    <div className="mb-10 text-center">
+      <p className="text-sm font-black uppercase tracking-[0.25em] text-[#0B66C3]">
+        Edufi Classes
+      </p>
+
+      <h2 className="mt-3 text-3xl font-black text-[#071A2F] md:text-5xl">
+        Students Solving Maths with Confidence
+      </h2>
+
+      <p className="mx-auto mt-4 max-w-2xl text-base text-slate-600 md:text-lg">
+        Swipe to explore how students grow with speed maths, tricks and practice.
+      </p>
+    </div>
+
+    <div className="flex gap-5 overflow-x-auto pb-4 md:grid md:grid-cols-4 md:overflow-visible">
+      {[
+        {
+          grade: "Class 7th",
+          title: "Building Strong Basics",
+          img: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=1200&auto=format&fit=crop",
+        },
+        {
+          grade: "Class 8th",
+          title: "Maths Speed Training",
+          img: "https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=1200&auto=format&fit=crop",
+        },
+        {
+          grade: "Class 9th",
+          title: "Problem Solving Mastery",
+          img: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=1200&auto=format&fit=crop",
+        },
+        {
+          grade: "Class 10th",
+          title: "Board Exam Preparation",
+          img: "https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=1200&auto=format&fit=crop",
+        },
+      ].map((item) => (
+        <div
+          key={item.grade}
+          className="min-w-[280px] overflow-hidden rounded-[2rem] bg-[#F4F8FF] shadow-xl transition hover:-translate-y-2 hover:shadow-2xl md:min-w-0"
+        >
+          <img
+            src={item.img}
+            alt={item.grade}
+            className="h-60 w-full object-cover md:h-72"
+          />
+
+          <div className="p-5 md:p-6">
+            <p className="text-sm font-black uppercase text-[#0B66C3]">
+              {item.grade}
             </p>
 
-            <h2 className="mt-3 text-4xl font-black text-[#071A2F] md:text-5xl">
-              Students Solving Maths with Confidence
-            </h2>
+            <h3 className="mt-2 text-xl font-black text-[#071A2F] md:text-2xl">
+              {item.title}
+            </h3>
 
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
-              Classroom-focused learning for Classes 7th–10th with speed maths,
-              tricks and problem solving.
+            <p className="mt-3 text-sm text-slate-600 md:text-base">
+              Daily practice, smart tricks and concept clarity.
             </p>
-          </div>
-
-          <div className="grid gap-8 md:grid-cols-4">
-            {[
-              {
-                grade: "Class 7th",
-                title: "Building Strong Basics",
-                img: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=1200&auto=format&fit=crop",
-              },
-              {
-                grade: "Class 8th",
-                title: "Maths Speed Training",
-                img: "https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=1200&auto=format&fit=crop",
-              },
-              {
-                grade: "Class 9th",
-                title: "Problem Solving Mastery",
-                img: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=1200&auto=format&fit=crop",
-              },
-              {
-                grade: "Class 10th",
-                title: "Board Exam Preparation",
-                img: "https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=1200&auto=format&fit=crop",
-              },
-            ].map((item) => (
-              <div
-                key={item.grade}
-                className="overflow-hidden rounded-[2rem] bg-[#F4F8FF] shadow-xl transition hover:-translate-y-2 hover:shadow-2xl"
-              >
-                <img
-                  src={item.img}
-                  alt={item.grade}
-                  className="h-72 w-full object-cover"
-                />
-
-                <div className="p-6">
-                  <p className="text-sm font-black uppercase text-[#0B66C3]">
-                    {item.grade}
-                  </p>
-
-                  <h3 className="mt-2 text-2xl font-black text-[#071A2F]">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-3 text-slate-600">
-                    Daily practice, smart tricks and concept clarity.
-                  </p>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* FEATURES */}
-      <section className="px-6 py-16">
-        <div className="mx-auto max-w-7xl text-center">
-          <p className="font-black uppercase tracking-widest text-[#0B66C3]">
-            Why Join Sigma Maths?
+<section className="px-4 py-16 md:px-6">
+  <div className="mx-auto max-w-7xl text-center">
+    <p className="font-black uppercase tracking-widest text-[#0B66C3]">
+      Why Join Sigma Maths?
+    </p>
+
+    <h2 className="mt-3 text-3xl font-black text-[#071A2F] md:text-5xl">
+      Make Maths Fast, Easy and Interesting
+    </h2>
+
+    <div className="mt-10 flex gap-5 overflow-x-auto pb-4 md:grid md:grid-cols-4 md:overflow-visible">
+      {[
+        ["⚡", "2x Speed", "Improve calculation speed with daily drills."],
+        ["🧠", "Smart Tricks", "Learn shortcuts for faster solving."],
+        ["📘", "Daily Worksheet", "Practice every day with guided sheets."],
+        ["🎯", "Exam Ready", "Build accuracy and confidence."],
+      ].map(([icon, title, desc]) => (
+        <div
+          key={title}
+          className="min-w-[250px] rounded-3xl bg-white p-6 shadow-xl transition hover:-translate-y-2 hover:shadow-2xl md:min-w-0"
+        >
+          <p className="text-5xl">{icon}</p>
+
+          <h3 className="mt-4 text-xl font-black text-[#071A2F]">
+            {title}
+          </h3>
+
+          <p className="mt-3 text-sm text-slate-600 md:text-base">
+            {desc}
           </p>
-
-          <h2 className="mt-3 text-3xl font-black md:text-5xl">
-            Make Maths Fast, Easy and Interesting
-          </h2>
-
-          <div className="mt-10 grid gap-6 md:grid-cols-4">
-            {[
-              ["⚡", "2x Speed", "Improve calculation speed with daily drills."],
-              ["🧠", "Smart Tricks", "Learn shortcuts for faster solving."],
-              ["📘", "Daily Worksheet", "Practice every day with guided sheets."],
-              ["🎯", "Exam Ready", "Build accuracy and confidence."],
-            ].map(([icon, title, desc]) => (
-              <div
-                key={title}
-                className="rounded-3xl bg-white p-6 shadow-xl transition hover:-translate-y-2 hover:shadow-2xl"
-              >
-                <p className="text-5xl">{icon}</p>
-                <h3 className="mt-4 text-xl font-black text-[#071A2F]">
-                  {title}
-                </h3>
-                <p className="mt-3 text-slate-600">{desc}</p>
-              </div>
-            ))}
-          </div>
         </div>
-      </section>
-
+      ))}
+    </div>
+  </div>
+</section>
       {/* COURSE PLAN */}
       {/* COURSE PLAN */}
 <section className="relative overflow-hidden bg-gradient-to-br from-[#071A2F] via-[#0B3C6D] to-[#0B66C3] px-6 py-20">
