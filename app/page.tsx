@@ -253,62 +253,63 @@ Coupon Code: FN100`;
 </section>
 
       {/* YOUTUBE VIDEOS */}
-      <section className="bg-white px-6 py-20">
-        <div className="mx-auto max-w-7xl">
-          <div className="text-center">
-            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#0B66C3]">
-              Watch Before You Join
-            </p>
+<section className="bg-white px-4 py-16 md:px-6 md:py-20">
+  <div className="mx-auto max-w-7xl">
+    <div className="text-center">
+      <p className="text-sm font-black uppercase tracking-[0.25em] text-[#0B66C3]">
+        Watch Before You Join
+      </p>
 
-            <h2 className="mt-3 text-4xl font-black text-[#071A2F] md:text-5xl">
-              Sigma Maths Videos
-            </h2>
+      <h2 className="mt-3 text-3xl font-black text-[#071A2F] md:text-5xl">
+        Sigma Maths Videos
+      </h2>
 
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
-              Watch demo classes, maths tricks and course preview directly on
-              the website.
-            </p>
+      <p className="mx-auto mt-4 max-w-2xl text-base text-slate-600 md:text-lg">
+        Swipe to watch demo classes, maths tricks and course previews.
+      </p>
+    </div>
+
+    <div className="mt-10 flex gap-5 overflow-x-auto pb-5 md:grid md:grid-cols-3 md:overflow-visible">
+      {youtubeVideos.map((video) => (
+        <div
+          key={video.title}
+          className="min-w-[300px] overflow-hidden rounded-[2rem] bg-[#F4F8FF] p-4 shadow-xl transition hover:-translate-y-2 hover:shadow-2xl md:min-w-0"
+        >
+          <div className="relative aspect-video overflow-hidden rounded-2xl bg-black">
+            <iframe
+              className="absolute left-0 top-0 h-full w-full"
+              src={`https://www.youtube.com/embed/${video.videoId}`}
+              title={video.title}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
           </div>
 
-          <div className="mt-14 grid gap-8 md:grid-cols-3">
-            {youtubeVideos.map((video) => (
-              <div
-                key={video.title}
-                className="overflow-hidden rounded-[2rem] bg-[#F4F8FF] p-4 shadow-xl transition hover:-translate-y-2 hover:shadow-2xl"
-              >
-                <div className="relative aspect-video overflow-hidden rounded-2xl bg-black">
-                  <iframe
-                    className="absolute left-0 top-0 h-full w-full"
-                    src={`https://www.youtube.com/embed/${video.videoId}`}
-                    title={video.title}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                  ></iframe>
-                </div>
+          <div className="p-3">
+            <h3 className="mt-3 text-xl font-black text-[#071A2F] md:text-2xl">
+              {video.title}
+            </h3>
 
-                <div className="p-3">
-                  <h3 className="mt-3 text-2xl font-black text-[#071A2F]">
-                    {video.title}
-                  </h3>
-
-                  <p className="mt-2 text-slate-600">{video.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-10 text-center">
-            <a
-              href="https://www.youtube.com/@edufi_official"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block rounded-2xl bg-red-600 px-8 py-4 font-black text-white transition hover:bg-red-700"
-            >
-              Visit Our YouTube Channel
-            </a>
+            <p className="mt-2 text-sm text-slate-600 md:text-base">
+              {video.desc}
+            </p>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+
+    <div className="mt-8 text-center">
+      <a
+        href="https://www.youtube.com/@edufiofficial"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block rounded-2xl bg-red-600 px-8 py-4 font-black text-white transition hover:bg-red-700"
+      >
+        Visit Our YouTube Channel
+      </a>
+    </div>
+  </div>
+</section>
 
       {/* STUDENT PHOTOS */}
 <section className="bg-white px-4 py-16 md:px-6 md:py-20">
@@ -415,7 +416,7 @@ Coupon Code: FN100`;
     </div>
   </div>
 </section>
-      {/* COURSE PLAN */}
+      
       {/* COURSE PLAN */}
 <section className="relative overflow-hidden bg-gradient-to-br from-[#071A2F] via-[#0B3C6D] to-[#0B66C3] px-6 py-20">
   <div className="absolute left-10 top-10 h-32 w-32 rounded-full bg-[#FFC928]/20 blur-3xl"></div>
