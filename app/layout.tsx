@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "Sigma Maths Course",
 };
 
-const PIXEL_ID = "819304022723843";
+const PIXEL_ID = "517991158551582";
 
 export default function RootLayout({
   children,
