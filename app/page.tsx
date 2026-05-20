@@ -40,10 +40,15 @@ export default function Home() {
   const handleChange = (field: keyof FormData, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
-
+const trackLead = () => {
+  if (typeof window !== "undefined" && (window as any).fbq) {
+    (window as any).fbq("track", "Lead");
+  }
+};
   const openCourse = () => {
-    window.open(COURSE_LINK, "_blank", "noopener,noreferrer");
-  };
+  trackLead();
+  window.open(COURSE_LINK, "_blank", "noopener,noreferrer");
+};
 
   const handleSubmit = () => {
     if (!formData.name || !formData.studentClass || !formData.phone) {
@@ -57,11 +62,13 @@ Name: ${formData.name}
 Class: ${formData.studentClass}
 Phone: ${formData.phone}
 Coupon Code: FN100`;
+trackLead();
 
-    window.open(
-      `https://wa.me/919501941186?text=${encodeURIComponent(message)}`,
-      "_blank"
-    );
+window.open(
+  `https://wa.me/919501941186?text=${encodeURIComponent(message)}`,
+  "_blank"
+);
+   
 
     setShowForm(false);
     setFormData({ name: "", studentClass: "", phone: "" });
@@ -80,13 +87,14 @@ Coupon Code: FN100`;
           </div>
 
           <a
-            href="https://wa.me/919501941186"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full bg-green-500 px-5 py-3 font-black text-white transition hover:bg-green-600"
-          >
-            WhatsApp
-          </a>
+  href="https://wa.me/919501941186"
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={trackLead}
+  className="rounded-full bg-green-500 px-5 py-3 font-black text-white transition hover:bg-green-600"
+>
+  WhatsApp
+</a>
         </div>
       </nav>
 
@@ -531,13 +539,14 @@ Coupon Code: FN100`;
             </button>
 
             <a
-              href="https://wa.me/919501941186"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-2xl bg-green-500 px-8 py-4 font-black text-white transition hover:bg-green-600"
-            >
-              WhatsApp Us
-            </a>
+  href="https://wa.me/919501941186"
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={trackLead}
+  className="rounded-full bg-green-500 px-5 py-3 font-black text-white transition hover:bg-green-600"
+>
+  WhatsApp
+</a>
           </div>
         </div>
       </section>
