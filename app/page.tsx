@@ -308,7 +308,7 @@ window.open(
 
     <div className="mt-8 text-center">
       <a
-        href="https://www.youtube.com/@edufiofficial"
+        href="https://www.youtube.com/@edufi_classes"
         target="_blank"
         rel="noopener noreferrer"
         className="inline-block rounded-2xl bg-red-600 px-8 py-4 font-black text-white transition hover:bg-red-700"
