@@ -8,7 +8,8 @@ export const metadata: Metadata = {
 };
 
 const PIXEL_ID = "1819304022723843";
-const GOOGLE_TAG_ID = "AW-18031357095";
+const GOOGLE_TAG_ID = "GT-PLHPRRNZ";
+const GOOGLE_ADS_ID = "AW-18031357095";
 
 export default function RootLayout({
   children,
@@ -17,31 +18,23 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-
-        {/* GOOGLE ADS TAG */}
+      <body>
+        {/* GOOGLE TAG */}
         <Script
-          async
           src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_TAG_ID}`}
+          strategy="afterInteractive"
         />
 
-        <Script id="google-ads-tag" strategy="afterInteractive">
+        <Script id="google-tag" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
-
-            function gtag(){
-              dataLayer.push(arguments);
-            }
-
+            function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
             gtag('config', '${GOOGLE_TAG_ID}');
+            gtag('config', '${GOOGLE_ADS_ID}');
           `}
         </Script>
-
-      </head>
-
-      <body>
 
         {/* META PIXEL */}
         <Script id="meta-pixel" strategy="afterInteractive">
@@ -49,27 +42,21 @@ export default function RootLayout({
             !function(f,b,e,v,n,t,s)
             {
               if(f.fbq)return;
-
               n=f.fbq=function(){
                 n.callMethod
                   ? n.callMethod.apply(n,arguments)
                   : n.queue.push(arguments)
               };
-
               if(!f._fbq)f._fbq=n;
-
               n.push=n;
               n.loaded=!0;
               n.version='2.0';
               n.queue=[];
-
               t=b.createElement(e);
               t.async=!0;
               t.src=v;
-
               s=b.getElementsByTagName(e)[0];
               s.parentNode.insertBefore(t,s);
-
             }(
               window,
               document,
@@ -82,7 +69,6 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* NOSCRIPT FALLBACK */}
         <noscript>
           <img
             height="1"
@@ -94,7 +80,6 @@ export default function RootLayout({
         </noscript>
 
         {children}
-
       </body>
     </html>
   );
