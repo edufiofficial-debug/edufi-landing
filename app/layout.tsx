@@ -8,6 +8,8 @@ export const metadata: Metadata = {
 };
 
 const PIXEL_ID = "1819304022723843";
+const GOOGLE_TAG_ID = "AW-18031357095";
+
 export default function RootLayout({
   children,
 }: {
@@ -15,6 +17,29 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+
+        {/* GOOGLE ADS TAG */}
+        <Script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_TAG_ID}`}
+        />
+
+        <Script id="google-ads-tag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag(){
+              dataLayer.push(arguments);
+            }
+
+            gtag('js', new Date());
+
+            gtag('config', '${GOOGLE_TAG_ID}');
+          `}
+        </Script>
+
+      </head>
 
       <body>
 
@@ -24,10 +49,11 @@ export default function RootLayout({
             !function(f,b,e,v,n,t,s)
             {
               if(f.fbq)return;
+
               n=f.fbq=function(){
-                n.callMethod ?
-                n.callMethod.apply(n,arguments) :
-                n.queue.push(arguments)
+                n.callMethod
+                  ? n.callMethod.apply(n,arguments)
+                  : n.queue.push(arguments)
               };
 
               if(!f._fbq)f._fbq=n;
@@ -42,7 +68,7 @@ export default function RootLayout({
               t.src=v;
 
               s=b.getElementsByTagName(e)[0];
-              s.parentNode.insertBefore(t,s)
+              s.parentNode.insertBefore(t,s);
 
             }(
               window,
