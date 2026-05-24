@@ -18,7 +18,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <head>
+
         {/* GOOGLE TAG */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_TAG_ID}`}
@@ -28,7 +29,11 @@ export default function RootLayout({
         <Script id="google-tag" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
+
+            function gtag(){
+              dataLayer.push(arguments);
+            }
+
             gtag('js', new Date());
 
             gtag('config', '${GOOGLE_TAG_ID}');
@@ -36,27 +41,37 @@ export default function RootLayout({
           `}
         </Script>
 
+      </head>
+
+      <body>
+
         {/* META PIXEL */}
         <Script id="meta-pixel" strategy="afterInteractive">
           {`
             !function(f,b,e,v,n,t,s)
             {
               if(f.fbq)return;
+
               n=f.fbq=function(){
                 n.callMethod
                   ? n.callMethod.apply(n,arguments)
                   : n.queue.push(arguments)
               };
+
               if(!f._fbq)f._fbq=n;
+
               n.push=n;
               n.loaded=!0;
               n.version='2.0';
               n.queue=[];
+
               t=b.createElement(e);
               t.async=!0;
               t.src=v;
+
               s=b.getElementsByTagName(e)[0];
               s.parentNode.insertBefore(t,s);
+
             }(
               window,
               document,
@@ -80,6 +95,7 @@ export default function RootLayout({
         </noscript>
 
         {children}
+
       </body>
     </html>
   );
