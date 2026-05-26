@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 
 type FormData = {
   name: string;
@@ -11,7 +10,11 @@ type FormData = {
 const COURSE_LINK =
   "https://rlqyso.courses.store/842135?utm_source=other&utm_medium=tutor-course-referral&utm_campaign=course-overview-webapp";
 
-export default function Home() {
+
+import { useState } from "react";
+
+export default function Home() 
+{ const [showOfferPopup, setShowOfferPopup] = useState(true); 
   const [showForm, setShowForm] = useState(false);
   const [formData, setFormData] = useState<FormData>({
     name: "",
@@ -37,6 +40,7 @@ const trackLead = () => {
       alert("Please fill all fields");
       return;
     }
+    const [showOfferPopup, setShowOfferPopup] = useState(true);
 
     const message = `New Sigma Maths Course Enquiry
 
@@ -420,7 +424,7 @@ className="h-full w-full object-contain bg-black"          />
           <p className="mt-2 text-sm text-blue-100">
             Students Review.
           </p>
-        </div>
+        </div>pun
       </div>
     </div>
   ))}
@@ -679,7 +683,79 @@ className="h-full w-full object-contain bg-black"          />
   aria-label="Call Edufi Classes"
 >
   📞
-</a>
+</a>{/* SIGMA COURSE OFFER POPUP */}
+{showOfferPopup && (
+  <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 px-4 backdrop-blur-sm">
+    <div className="relative w-full max-w-md overflow-hidden rounded-[2rem] bg-white shadow-2xl">
+
+      <button
+        onClick={() => setShowOfferPopup(false)}
+        className="absolute right-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-2xl font-black text-slate-600 shadow-md hover:text-red-600"
+      >
+        ×
+      </button>
+
+      <div className="bg-[#071A2F] px-6 py-7 text-center text-white">
+        <p className="text-xs font-black uppercase tracking-[0.25em] text-blue-200">
+          Upcoming Sigma Course
+        </p>
+
+        <h2 className="mt-3 text-3xl font-black leading-tight">
+          Sigma Maths 30-Day Challenge
+        </h2>
+
+        <p className="mt-3 text-sm text-blue-100">
+          For Classes 6th–10th • Speed Maths • Tricks • Daily Practice
+        </p>
+      </div>
+
+      <div className="p-6 text-center">
+        <div className="mx-auto inline-flex rounded-full bg-red-50 px-5 py-2 text-sm font-black text-red-600">
+          🔥 Only 27 Seats Left
+        </div>
+
+        <div className="mt-5 rounded-2xl bg-[#F8FAFC] p-5">
+          <p className="text-sm font-black uppercase tracking-widest text-[#0B66C3]">
+            Special Launch Offer
+          </p>
+
+          <h3 className="mt-2 text-5xl font-black text-[#071A2F]">
+            ₹499
+          </h3>
+
+          <p className="mt-2 font-semibold text-slate-600">
+            Regular Price <span className="line-through">₹999</span>
+          </p>
+
+          <p className="mt-3 rounded-xl bg-white px-4 py-3 font-black text-[#071A2F] shadow-sm">
+            Coupon Code: FN100
+          </p>
+        </div>
+
+        <div className="mt-5 grid grid-cols-2 gap-3 text-sm font-bold text-slate-700">
+          <div className="rounded-xl bg-[#F8FAFC] p-3">📘 Daily Worksheets</div>
+          <div className="rounded-xl bg-[#F8FAFC] p-3">⚡ Speed Tricks</div>
+          <div className="rounded-xl bg-[#F8FAFC] p-3">💬 Doubt Support</div>
+          <div className="rounded-xl bg-[#F8FAFC] p-3">🎯 Exam Confidence</div>
+        </div>
+
+        <button
+          onClick={openCourse}
+          className="mt-6 w-full rounded-2xl bg-[#071A2F] px-6 py-4 text-lg font-black text-white shadow-lg transition hover:-translate-y-1 hover:bg-[#0B66C3]"
+        >
+          Enroll Now →
+        </button>
+
+        <button
+          onClick={() => setShowOfferPopup(false)}
+          className="mt-3 text-sm font-bold text-slate-500 hover:text-[#071A2F]"
+        >
+          I’ll check later
+        </button>
+      </div>
+    </div>
+  </div>
+)}
     </main>
   );
 }
