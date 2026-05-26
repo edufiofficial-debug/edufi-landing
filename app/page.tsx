@@ -697,7 +697,7 @@ className="h-full w-full object-contain bg-black"          />
 
       <div className="bg-[#071A2F] px-6 py-7 text-center text-white">
         <p className="text-xs font-black uppercase tracking-[0.25em] text-blue-200">
-          Upcoming Sigma Course
+          Sigma Maths 30-Day Challenge starting on 1st June
         </p>
 
         <h2 className="mt-3 text-3xl font-black leading-tight">
