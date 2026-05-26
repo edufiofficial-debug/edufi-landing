@@ -11,24 +11,6 @@ type FormData = {
 const COURSE_LINK =
   "https://rlqyso.courses.store/842135?utm_source=other&utm_medium=tutor-course-referral&utm_campaign=course-overview-webapp";
 
-const youtubeVideos = [
-  {
-    title: "Sigma Maths Course Intro",
-    desc: "Watch how Sigma 30 Day Maths Challenge helps students improve speed and confidence.",
-    videoId: "J9fIKPwPLTw",
-  },
-  {
-    title: "Speed Maths Trick",
-    desc: "Learn fast calculation tricks for Classes 6th–10th.",
-    videoId: "YOUR_VIDEO_ID_2",
-  },
-  {
-    title: "Reasoning + Mental Maths",
-    desc: "Smart solving methods for school and competitive preparation.",
-    videoId: "YOUR_VIDEO_ID_3",
-  },
-];
-
 export default function Home() {
   const [showForm, setShowForm] = useState(false);
   const [formData, setFormData] = useState<FormData>({
@@ -142,7 +124,7 @@ window.open(
       </p>
 
       <h1 className="mt-6 text-4xl font-black leading-tight md:text-6xl">
-        Sigma Maths Batch for Classes{" "}
+        Hisar's Trusted Maths Classes{" "}
         <span className="text-[#FFC928]">6th–10th</span>
       </h1>
 
@@ -214,7 +196,7 @@ window.open(
       <div className="rounded-[1.5rem] bg-gradient-to-br from-[#FFF4C2] to-[#FFECA0] p-5 shadow-inner">
 
         <p className="rounded-full bg-green-100 px-4 py-2 text-center text-sm font-black text-green-700">
-          ✅ Limited Seats Open
+          ✅ 27 seats Left
         </p>
 
         <p className="mt-5 text-xs font-black uppercase tracking-wide text-orange-600">
@@ -260,7 +242,7 @@ window.open(
 </div>
 </section>
 
-      {/* YOUTUBE VIDEOS */}
+{/* YOUTUBE VIDEOS */}
 <section className="bg-white px-4 py-16 md:px-6 md:py-20">
   <div className="mx-auto max-w-7xl">
     <div className="text-center">
@@ -273,17 +255,58 @@ window.open(
       </h2>
 
       <p className="mx-auto mt-4 max-w-2xl text-base text-slate-600 md:text-lg">
-        Swipe to watch demo classes, maths tricks and course previews.
+        Swipe to watch demo classes, maths tricks, puzzles and course previews.
       </p>
     </div>
 
-    <div className="mt-10 flex gap-5 overflow-x-auto pb-5 md:grid md:grid-cols-3 md:overflow-visible">
-      {youtubeVideos.map((video) => (
+    <div className="mt-10 flex snap-x gap-5 overflow-x-auto pb-5">
+      {[
+        {
+          title: "Sigma Maths Course Intro",
+          desc: "See how Sigma Maths improves speed and confidence.",
+          videoId: "J9fIKPwPLTw",
+        },
+        {
+          title: "Speed Maths Tricks",
+          desc: "Learn smart calculation shortcuts.",
+          videoId: "uSyFu_RoS8s",
+        },
+        {
+          title: "Reasoning + Mental Maths",
+          desc: "Build logical thinking and problem solving.",
+          videoId: "hlmwbQTL9uk",
+        },
+        {
+          title: "Squares Trick in Seconds",
+          desc: "Fast square solving methods for students.",
+          videoId: "uAROKNPdgVg",
+        },
+        {
+          title: "Only 1% Can Solve This",
+          desc: "Interesting maths puzzles and brain teasers.",
+          videoId: "YOUR_VIDEO_ID_5",
+        },
+        {
+          title: "Board Exam Maths Strategy",
+          desc: "Smart preparation tips for Class 10th.",
+          videoId: "YOUR_VIDEO_ID_6",
+        },
+        {
+          title: "Daily Practice Session",
+          desc: "Watch students solving questions live.",
+          videoId: "YOUR_VIDEO_ID_7",
+        },
+        {
+          title: "Sigma Maths Workshop",
+          desc: "Highlights from classroom workshops.",
+          videoId: "YOUR_VIDEO_ID_8",
+        },
+      ].map((video) => (
         <div
           key={video.title}
-          className="min-w-[300px] overflow-hidden rounded-[2rem] bg-[#F4F8FF] p-4 shadow-xl transition hover:-translate-y-2 hover:shadow-2xl md:min-w-0"
+          className="group min-w-[320px] snap-center rounded-[1.5rem] border border-slate-100 bg-[#F8FAFC] p-4 shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl md:min-w-[380px]"
         >
-          <div className="relative aspect-video overflow-hidden rounded-2xl bg-black">
+          <div className="relative aspect-video overflow-hidden rounded-[1.2rem] bg-black transition duration-500 group-hover:scale-[1.02]">
             <iframe
               className="absolute left-0 top-0 h-full w-full"
               src={`https://www.youtube.com/embed/${video.videoId}`}
@@ -294,11 +317,11 @@ window.open(
           </div>
 
           <div className="p-3">
-            <h3 className="mt-3 text-xl font-black text-[#071A2F] md:text-2xl">
+            <h3 className="mt-3 text-2xl font-black leading-tight text-[#071A2F]">
               {video.title}
             </h3>
 
-            <p className="mt-2 text-sm text-slate-600 md:text-base">
+            <p className="mt-3 text-base leading-relaxed text-slate-600">
               {video.desc}
             </p>
           </div>
@@ -306,86 +329,133 @@ window.open(
       ))}
     </div>
 
-    <div className="mt-8 text-center">
+    <div className="mt-6 text-center">
       <a
         href="https://www.youtube.com/@edufi_classes"
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-block rounded-2xl bg-red-600 px-8 py-4 font-black text-white transition hover:bg-red-700"
+        className="inline-flex items-center justify-center rounded-2xl bg-red-600 px-8 py-4 font-black text-white shadow-sm transition hover:-translate-y-1 hover:bg-red-700"
       >
-        Visit Our YouTube Channel
+        ▶ Visit Our YouTube Channel
       </a>
     </div>
   </div>
 </section>
 
-      {/* STUDENT PHOTOS */}
-<section className="bg-white px-4 py-16 md:px-6 md:py-20">
-  <div className="mx-auto max-w-7xl">
-    <div className="mb-10 text-center">
-      <p className="text-sm font-black uppercase tracking-[0.25em] text-[#0B66C3]">
+     {/* STYLISH STUDENT PHOTO GALLERY */}
+<section className="relative overflow-hidden bg-white px-4 py-16 md:px-6 md:py-24">
+  <div className="absolute left-0 top-20 h-72 w-72 rounded-full bg-[#EAF2FF] blur-3xl"></div>
+  <div className="absolute bottom-10 right-0 h-72 w-72 rounded-full bg-blue-100/60 blur-3xl"></div>
+
+  <div className="relative mx-auto max-w-7xl">
+    <div className="text-center">
+      <p className="text-sm font-black uppercase tracking-[0.3em] text-[#0B66C3]">
         Edufi Classes
       </p>
 
-      <h2 className="mt-3 text-3xl font-black text-[#071A2F] md:text-5xl">
-        Students Solving Maths with Confidence
+      <h2 className="mt-4 text-4xl font-black leading-tight text-[#071A2F] md:text-6xl">
+        Real Students. Real Learning.
       </h2>
 
-      <p className="mx-auto mt-4 max-w-2xl text-base text-slate-600 md:text-lg">
-        Swipe to explore how students grow with speed maths, tricks and practice.
+      <p className="mx-auto mt-5 max-w-3xl text-lg leading-relaxed text-slate-600">
+        Classroom moments, workshops and students building maths confidence with Edufi Classes.
       </p>
     </div>
 
-    <div className="flex gap-5 overflow-x-auto pb-4 md:grid md:grid-cols-4 md:overflow-visible">
-      {[
-        {
-          grade: "Class 7th",
-          title: "Building Strong Basics",
-          img: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=1200&auto=format&fit=crop",
-        },
-        {
-          grade: "Class 8th",
-          title: "Maths Speed Training",
-          img: "https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=1200&auto=format&fit=crop",
-        },
-        {
-          grade: "Class 9th",
-          title: "Problem Solving Mastery",
-          img: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=1200&auto=format&fit=crop",
-        },
-        {
-          grade: "Class 10th",
-          title: "Board Exam Preparation",
-          img: "https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=1200&auto=format&fit=crop",
-        },
-      ].map((item) => (
-        <div
-          key={item.grade}
-          className="min-w-[280px] overflow-hidden rounded-[2rem] bg-[#F4F8FF] shadow-xl transition hover:-translate-y-2 hover:shadow-2xl md:min-w-0"
-        >
+    <div className="mt-14 grid gap-6 md:grid-cols-4">
+  {[
+    {
+      type: "image",
+      src: "/students/student1.jpeg",
+      title: "Classroom Practice",
+      tag: "Daily Learning",
+    },
+    {
+      type: "image",
+      src: "/students/student2.jpeg",
+      title: "Maths Workshop",
+      tag: "Live Session",
+    },
+    {
+      type: "video",
+      src: "/students/video1.mp4",
+      title: "Problem Solving",
+      tag: "Smart Practice",
+    },
+    {
+      type: "video",
+      src: "/students/video2.mp4",
+      title: "Confidence Building",
+      tag: "Edufi Growth",
+    },
+  ].map((item) => (
+    <div
+      key={item.title}
+      className="group overflow-hidden rounded-[2rem] border border-slate-100 bg-white shadow-sm transition duration-500 hover:-translate-y-2 hover:shadow-lg"
+    >
+      <div className="relative h-[340px] overflow-hidden">
+        {item.type === "video" ? (
+          <video
+            src={item.src}
+            controls
+            muted
+            playsInline
+className="h-full w-full object-contain bg-black"          />
+        ) : (
           <img
-            src={item.img}
-            alt={item.grade}
-            className="h-60 w-full object-cover md:h-72"
+            src={item.src}
+            alt={item.title}
+            className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
           />
+        )}
 
-          <div className="p-5 md:p-6">
-            <p className="text-sm font-black uppercase text-[#0B66C3]">
-              {item.grade}
-            </p>
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#071A2F]/85 via-[#071A2F]/20 to-transparent"></div>
 
-            <h3 className="mt-2 text-xl font-black text-[#071A2F] md:text-2xl">
-              {item.title}
-            </h3>
+        <div className="absolute left-5 top-5 rounded-full bg-white/95 px-4 py-2 text-xs font-black uppercase tracking-widest text-[#0B66C3] shadow-md">
+          {item.tag}
+        </div>
 
-            <p className="mt-3 text-sm text-slate-600 md:text-base">
-              Daily practice, smart tricks and concept clarity.
-            </p>
-          </div>
+        <div className="pointer-events-none absolute bottom-5 left-5 right-5 text-white">
+          <h3 className="text-2xl font-black">{item.title}</h3>
+          <p className="mt-2 text-sm text-blue-100">
+            Students Review.
+          </p>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+
+    <div className="mt-14 grid gap-5 md:grid-cols-4">
+      {[
+        ["500+", "Students Guided"],
+        ["30 Days", "Focused Training"],
+        ["100+", "Maths Tricks"],
+        ["4.9★", "Student Satisfaction"],
+      ].map(([num, text]) => (
+        <div
+          key={num}
+          className="rounded-[1.7rem] border border-slate-100 bg-[#F8FAFC] p-6 text-center shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-lg"
+        >
+          <h3 className="text-4xl font-black text-[#071A2F]">{num}</h3>
+          <p className="mt-2 font-semibold text-slate-600">{text}</p>
         </div>
       ))}
     </div>
   </div>
+
+  <style jsx>{`
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(35px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  `}</style>
 </section>
 
       {/* FEATURES */}
@@ -491,28 +561,27 @@ window.open(
 
       {/* LOCATION */}
       <section className="bg-white px-6 py-16">
-        <div className="mx-auto max-w-6xl rounded-[2rem] bg-[#F4F8FF] p-8 shadow-xl">
-          <p className="text-sm font-black uppercase tracking-[0.25em] text-[#0B66C3]">
-            Edufi Classes
-          </p>
+        <div className="mt-6 flex flex-col gap-4 md:flex-row md:flex-wrap">
 
-          <h2 className="mt-3 text-4xl font-black text-[#071A2F]">
-            Visit Our Institute
-          </h2>
+  <div className="rounded-2xl bg-white px-6 py-4 text-lg font-black text-[#071A2F] shadow-sm">
+    📍 202, Lajpat Nagar, Hisar
+  </div>
 
-          <p className="mt-4 text-lg text-slate-700">
-            📍 202, Lajpat Nagar, Hisar
-          </p>
+  <a
+    href="tel:9501941186"
+    className="rounded-2xl bg-white px-6 py-4 text-lg font-black text-[#071A2F] shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+  >
+    📞 9501941186
+  </a>
 
-          <a
-            href="https://maps.google.com/?q=202,Lajpat+Nagar,Hisar"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-6 inline-block rounded-2xl bg-[#0B66C3] px-8 py-4 font-black text-white transition hover:bg-[#071A2F]"
-          >
-            Open in Google Maps
-          </a>
-        </div>
+  <a
+    href="tel:7027732516"
+    className="rounded-2xl bg-white px-6 py-4 text-lg font-black text-[#071A2F] shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+  >
+    📞 7027732516
+  </a>
+
+</div>
       </section>
 
       {/* FINAL CTA */}
@@ -603,6 +672,14 @@ window.open(
           </div>
         </div>
       )}
+      {/* FLOATING CALL BUTTON */}
+<a
+  href="tel:9501941186"
+  className="fixed bottom-6 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-green-500 text-3xl text-white shadow-2xl transition hover:scale-110 hover:bg-green-600"
+  aria-label="Call Edufi Classes"
+>
+  📞
+</a>
     </main>
   );
 }
