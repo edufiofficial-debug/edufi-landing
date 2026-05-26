@@ -191,7 +191,7 @@ window.open(
           </h3>
 
           <p className="mt-2 text-sm text-blue-100">
-            Daily maths practice for speed and confidence.
+            Starting on 1st June. Limited seats available.
           </p>
         </div>
       </div>
