@@ -11,8 +11,7 @@ const COURSE_LINK =
   "https://rlqyso.courses.store/842135?utm_source=other&utm_medium=tutor-course-referral&utm_campaign=course-overview-webapp";
 
 
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
 export default function Home() 
 { const [showOfferPopup, setShowOfferPopup] = useState(true); 
   const [showForm, setShowForm] = useState(false);
@@ -21,6 +20,41 @@ export default function Home()
     studentClass: "",
     phone: "",
   });
+  const offerEndDate = new Date("2026-05-30T00:00:00").getTime();
+
+const [timeLeft, setTimeLeft] = useState({
+  days: "00",
+  hours: "00",
+  minutes: "00",
+  seconds: "00",
+});
+
+useEffect(() => {
+  const timer = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = offerEndDate - now;
+
+    if (distance <= 0) {
+      clearInterval(timer);
+      setTimeLeft({
+        days: "00",
+        hours: "00",
+        minutes: "00",
+        seconds: "00",
+      });
+      return;
+    }
+
+    setTimeLeft({
+      days: String(Math.floor(distance / (1000 * 60 * 60 * 24))).padStart(2, "0"),
+      hours: String(Math.floor((distance / (1000 * 60 * 60)) % 24)).padStart(2, "0"),
+      minutes: String(Math.floor((distance / (1000 * 60)) % 60)).padStart(2, "0"),
+      seconds: String(Math.floor((distance / 1000) % 60)).padStart(2, "0"),
+    });
+  }, 1000);
+
+  return () => clearInterval(timer);
+}, []);
 
   const handleChange = (field: keyof FormData, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
@@ -213,7 +247,32 @@ window.open(
           <p className="mb-1 text-base font-black text-red-600">
             50% OFF
           </p>
+        </div><div className="mt-5 rounded-2xl border border-orange-300 bg-white/60 p-4 text-center shadow-sm">
+  <p className="text-red-600 font-extrabold mb-3">
+    ⏰ Offer ends in
+  </p>
+
+  <div className="grid grid-cols-4 gap-2">
+    {[
+      { label: "DAYS", value: timeLeft.days },
+      { label: "HRS", value: timeLeft.hours },
+      { label: "MINS", value: timeLeft.minutes },
+      { label: "SECS", value: timeLeft.seconds },
+    ].map((item) => (
+      <div
+        key={item.label}
+        className="bg-yellow-100 rounded-xl py-3"
+      >
+        <div className="text-2xl md:text-3xl font-black text-[#0f172a]">
+          {item.value}
         </div>
+        <div className="text-xs font-bold text-slate-600">
+          {item.label}
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
 
         <p className="mt-2 text-base font-bold text-slate-600">
           <span className="line-through">₹999</span> only for first 100 students
