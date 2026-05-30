@@ -759,75 +759,97 @@ className="h-full w-full object-contain bg-black"          />
   aria-label="Call Edufi Classes"
 >
   📞
-</a>{/* SIGMA COURSE OFFER POPUP */}
-{showOfferPopup && (
-  <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 px-4 backdrop-blur-sm">
-    <div className="relative w-full max-w-md overflow-hidden rounded-[2rem] bg-white shadow-2xl">
+</a>{showOfferPopup && (
+  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4">
+    <div className="relative w-[92%] max-w-sm max-h-[88vh] overflow-y-auto rounded-3xl bg-white shadow-2xl">
 
+      {/* Close Button */}
       <button
         onClick={() => setShowOfferPopup(false)}
-        className="absolute right-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-2xl font-black text-slate-600 shadow-md hover:text-red-600"
+        className="absolute right-3 top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white text-2xl font-bold shadow-lg"
       >
         ×
       </button>
 
-      <div className="bg-[#071A2F] px-6 py-7 text-center text-white">
-        <p className="text-xs font-black uppercase tracking-[0.25em] text-blue-200">
-          Sigma Maths 30-Day Challenge starting on 1st June
+      {/* Header */}
+      <div className="bg-[#001f3f] px-5 py-8 text-center text-white">
+        <p className="text-xs font-bold tracking-[4px] uppercase opacity-80">
+          Sigma Maths 30-Day Challenge
         </p>
 
-        <h2 className="mt-3 text-3xl font-black leading-tight">
-          Sigma Maths 30-Day Challenge
+        <h2 className="mt-4 text-3xl font-extrabold leading-tight">
+          Sigma Maths
+          <br />
+          30-Day Challenge
         </h2>
 
-        <p className="mt-3 text-sm text-blue-100">
+        <p className="mt-4 text-base text-white/80">
           For Classes 6th–10th • Speed Maths • Tricks • Daily Practice
         </p>
       </div>
 
-      <div className="p-6 text-center">
-        <div className="mx-auto inline-flex rounded-full bg-red-50 px-5 py-2 text-sm font-black text-red-600">
-          🔥 Only 27 Seats Left
+      {/* Content */}
+      <div className="p-5">
+
+        <div className="mb-5 text-center">
+          <span className="rounded-full bg-red-100 px-5 py-2 text-lg font-bold text-red-600">
+            🔥 Only 27 Seats Left
+          </span>
         </div>
 
-        <div className="mt-5 rounded-2xl bg-[#F8FAFC] p-5">
-          <p className="text-sm font-black uppercase tracking-widest text-[#0B66C3]">
+        {/* Price Box */}
+        <div className="rounded-3xl bg-slate-50 p-5 text-center shadow-sm">
+          <p className="text-lg font-bold uppercase tracking-wider text-blue-700">
             Special Launch Offer
           </p>
 
-          <h3 className="mt-2 text-5xl font-black text-[#071A2F]">
+          <div className="mt-3 text-6xl font-extrabold text-slate-900">
             ₹499
-          </h3>
+          </div>
 
-          <p className="mt-2 font-semibold text-slate-600">
+          <p className="mt-2 text-xl text-slate-500">
             Regular Price <span className="line-through">₹999</span>
           </p>
 
-          <p className="mt-3 rounded-xl bg-white px-4 py-3 font-black text-[#071A2F] shadow-sm">
+          <div className="mt-4 rounded-2xl border bg-white p-4 text-xl font-bold text-slate-900">
             Coupon Code: FN100
-          </p>
+          </div>
         </div>
 
-        <div className="mt-5 grid grid-cols-2 gap-3 text-sm font-bold text-slate-700">
-          <div className="rounded-xl bg-[#F8FAFC] p-3">📘 Daily Worksheets</div>
-          <div className="rounded-xl bg-[#F8FAFC] p-3">⚡ Speed Tricks</div>
-          <div className="rounded-xl bg-[#F8FAFC] p-3">💬 Doubt Support</div>
-          <div className="rounded-xl bg-[#F8FAFC] p-3">🎯 Exam Confidence</div>
+        {/* Features */}
+        <div className="mt-5 grid grid-cols-2 gap-3">
+          <div className="rounded-2xl bg-slate-100 p-3 text-center font-semibold">
+            📘 Daily Worksheets
+          </div>
+
+          <div className="rounded-2xl bg-slate-100 p-3 text-center font-semibold">
+            ⚡ Speed Tricks
+          </div>
+
+          <div className="rounded-2xl bg-slate-100 p-3 text-center font-semibold">
+            💬 Doubt Support
+          </div>
+
+          <div className="rounded-2xl bg-slate-100 p-3 text-center font-semibold">
+            🎯 Exam Confidence
+          </div>
         </div>
 
-        <button
-          onClick={openCourse}
-          className="mt-6 w-full rounded-2xl bg-[#071A2F] px-6 py-4 text-lg font-black text-white shadow-lg transition hover:-translate-y-1 hover:bg-[#0B66C3]"
+        {/* CTA */}
+        <a
+          href={COURSE_LINK}
+          className="mt-6 block w-full rounded-2xl bg-[#001f3f] py-4 text-center text-2xl font-bold text-white shadow-lg"
         >
           Enroll Now →
-        </button>
+        </a>
 
         <button
           onClick={() => setShowOfferPopup(false)}
-          className="mt-3 text-sm font-bold text-slate-500 hover:text-[#071A2F]"
+          className="mt-4 w-full text-center text-lg font-semibold text-slate-500"
         >
-          I’ll check later
+          I'll check later
         </button>
+
       </div>
     </div>
   </div>
