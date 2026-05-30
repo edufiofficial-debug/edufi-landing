@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 
 type FormData = {
   name: string;
@@ -7,27 +8,33 @@ type FormData = {
   phone: string;
 };
 
+const UPI_ID = "edufi987@fbl";
+const COURSE_PRICE = 499;
+
 const COURSE_LINK =
   "https://rlqyso.courses.store/842135?utm_source=other&utm_medium=tutor-course-referral&utm_campaign=course-overview-webapp";
 
-
-import { useState, useEffect } from "react";
-export default function Home() 
-{ const [showOfferPopup, setShowOfferPopup] = useState(true); 
+export default function Home() {
+  const [showOfferPopup, setShowOfferPopup] = useState(true);
   const [showForm, setShowForm] = useState(false);
+  const [showQR, setShowQR] = useState(false);
+
+  const upiLink = `upi://pay?pa=${UPI_ID}&pn=Edufi%20Classes&am=${COURSE_PRICE}&cu=INR`;
+
   const [formData, setFormData] = useState<FormData>({
     name: "",
     studentClass: "",
     phone: "",
   });
+
   const offerEndDate = new Date("2026-05-30T00:00:00").getTime();
 
-const [timeLeft, setTimeLeft] = useState({
-  days: "00",
-  hours: "00",
-  minutes: "00",
-  seconds: "00",
-});
+  const [timeLeft, setTimeLeft] = useState({
+    days: "00",
+    hours: "00",
+    minutes: "00",
+    seconds: "00",
+  });
 
 useEffect(() => {
   const timer = setInterval(() => {
@@ -298,6 +305,16 @@ window.open(
         >
           Enroll at ₹499 →
         </button>
+        <p className="mt-2 text-center text-xs text-gray-500">
+  Course link not working?
+</p>
+
+<button
+  onClick={() => setShowQR(true)}
+  className="block mx-auto text-green-600 font-semibold text-sm hover:underline"
+>
+  Pay Directly via UPI
+</button>
       </div>
     </div>
   </div>
@@ -812,6 +829,50 @@ className="h-full w-full object-contain bg-black"          />
           I’ll check later
         </button>
       </div>
+    </div>
+  </div>
+)}
+{showQR && (
+  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4">
+    <div className="bg-white rounded-3xl p-6 text-center max-w-sm w-full shadow-2xl">
+
+      <h3 className="text-2xl font-bold">
+        Pay ₹499
+      </h3>
+
+      <p className="text-gray-600 mt-2">
+        Scan QR using GPay, PhonePe or Paytm
+      </p>
+
+      <img
+        src="/payment-qr.png"
+        alt="Payment QR"
+        className="w-64 h-64 mx-auto mt-5 rounded-xl border"
+      />
+
+      <a
+        href={upiLink}
+        className="mt-5 block bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-xl"
+      >
+        Open UPI App
+      </a>
+
+      <a
+        href="https://wa.me/919501941186"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-3 block text-green-600 font-semibold"
+      >
+        Send Screenshot on WhatsApp
+      </a>
+
+      <button
+        onClick={() => setShowQR(false)}
+        className="mt-4 text-gray-500"
+      >
+        Close
+      </button>
+
     </div>
   </div>
 )}
