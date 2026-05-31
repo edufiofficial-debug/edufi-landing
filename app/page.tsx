@@ -27,7 +27,7 @@ export default function Home() {
     phone: "",
   });
 
-  const offerEndDate = new Date("2026-05-30T00:00:00").getTime();
+  const offerEndDate = new Date("2026-06-01T00:00:00").getTime();
 
   const [timeLeft, setTimeLeft] = useState({
     days: "00",
@@ -241,7 +241,7 @@ window.open(
       <div className="rounded-[1.5rem] bg-gradient-to-br from-[#FFF4C2] to-[#FFECA0] p-5 shadow-inner">
 
         <p className="rounded-full bg-green-100 px-4 py-2 text-center text-sm font-black text-green-700">
-          ✅ 27 seats Left
+          ✅ 19 seats Left
         </p>
 
         <p className="mt-5 text-xs font-black uppercase tracking-wide text-orange-600">
@@ -793,7 +793,7 @@ className="h-full w-full object-contain bg-black"          />
 
         <div className="mb-5 text-center">
           <span className="rounded-full bg-red-100 px-5 py-2 text-lg font-bold text-red-600">
-            🔥 Only 27 Seats Left
+            🔥 Only 19 Seats Left
           </span>
         </div>
 
