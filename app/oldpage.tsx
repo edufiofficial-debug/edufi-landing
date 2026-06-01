@@ -113,7 +113,7 @@ window.open(
       </p>
     </div>
 
-    <div className="flex flex-wrap items-center justify-end gap-2">
+    <div className="flex items-center gap-3">
 
   <a
     href="/tests"
@@ -144,12 +144,6 @@ window.open(
 </div>
   </div>
 </nav>
-
-      {/* STICKY BATCH STRIP */}
-      <section className="sticky top-[76px] z-30 bg-red-600 px-4 py-3 text-center text-sm font-black text-white shadow-lg md:text-base">
-        🔥 Sigma Batch Starts 13 June | Enroll at ₹499 | Limited Seats
-      </section>
-
       {/* OFFER BAR */}
       <section className="bg-[#FFC928] px-6 py-5 shadow-xl">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 text-center md:flex-row md:text-left">
@@ -194,16 +188,16 @@ window.open(
       </p>
 
       <h1 className="mt-6 text-4xl font-black leading-tight md:text-6xl">
-        Make Your Child Faster in Maths{" "}
-        <span className="text-[#FFC928]">in 30 Days</span>
+        Hisar's Trusted Maths Classes{" "}
+        <span className="text-[#FFC928]">6th–10th</span>
       </h1>
 
       <p className="mt-5 max-w-xl text-lg leading-relaxed text-blue-100">
-        Daily worksheets, 100+ speed tricks, doubt support and problem-solving practice
-        for Classes 6th–10th students in Hisar and online.
+        Make your child faster, sharper and more confident in maths with daily
+        worksheets, speed tricks and problem-solving practice.
       </p>
 
-      <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-8 flex flex-col gap-4 sm:flex-row">
         <button
           onClick={openCourse}
           className="rounded-2xl bg-[#FFC928] px-8 py-4 text-lg font-black text-[#071A2F] shadow-xl transition hover:-translate-y-1 hover:bg-orange-400"
@@ -225,22 +219,6 @@ window.open(
 >
   📱 Download App Now
 </a>
-      </div>
-
-      <div className="mt-8 flex flex-wrap gap-3">
-        {[
-          "⭐ 500+ Students",
-          "📘 100+ Maths Tricks",
-          "🎯 Classes 6th–10th",
-          "🏆 Trusted in Hisar",
-        ].map((item) => (
-          <div
-            key={item}
-            className="rounded-full bg-white/10 px-4 py-2 text-sm font-bold backdrop-blur"
-          >
-            {item}
-          </div>
-        ))}
       </div>
 
       <div className="mt-8 grid grid-cols-3 gap-4">
@@ -287,13 +265,10 @@ window.open(
       </div>
 
       {/* OFFER CARD */}
-      <div className="relative rounded-[1.5rem] bg-gradient-to-br from-[#FFF4C2] to-[#FFECA0] p-5 shadow-inner">
-        <div className="absolute -right-2 -top-2 rotate-12 rounded-full bg-red-600 px-4 py-2 text-xs font-black text-white shadow-lg">
-          50% OFF
-        </div>
+      <div className="rounded-[1.5rem] bg-gradient-to-br from-[#FFF4C2] to-[#FFECA0] p-5 shadow-inner">
 
         <p className="rounded-full bg-green-100 px-4 py-2 text-center text-sm font-black text-green-700">
-          ✅ 19 Seats Left • Batch Starts 13 June
+          ✅ 19 seats Left
         </p>
 
         <p className="mt-5 text-xs font-black uppercase tracking-wide text-orange-600">
@@ -590,67 +565,6 @@ className="h-full w-full object-contain bg-black"          />
   `}</style>
 </section>
 
-{/* STUDENT TRANSFORMATION */}
-<section className="bg-[#FFF8E7] px-4 py-16 md:px-6">
-  <div className="mx-auto max-w-7xl text-center">
-    <p className="font-black uppercase tracking-widest text-[#0B66C3]">
-      Student Transformation
-    </p>
-
-    <h2 className="mt-3 text-3xl font-black text-[#071A2F] md:text-5xl">
-      From Slow Solving to Fast Solver
-    </h2>
-
-    <div className="mt-10 grid gap-6 md:grid-cols-3">
-      {[
-        ["😟", "Day 1", "Confused in calculations and word problems"],
-        ["🔥", "30 Days", "Daily worksheets, tricks and guided practice"],
-        ["😎", "Day 30", "Faster, sharper and more confident in Maths"],
-      ].map(([icon, title, desc]) => (
-        <div
-          key={title}
-          className="rounded-[2rem] bg-white p-8 shadow-xl transition hover:-translate-y-2 hover:shadow-2xl"
-        >
-          <p className="text-6xl">{icon}</p>
-          <h3 className="mt-5 text-2xl font-black text-[#071A2F]">{title}</h3>
-          <p className="mt-3 text-slate-600">{desc}</p>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
-
-{/* GOOGLE REVIEWS */}
-<section className="bg-white px-4 py-16 md:px-6">
-  <div className="mx-auto max-w-7xl">
-    <div className="text-center">
-      <p className="font-black uppercase tracking-widest text-[#0B66C3]">
-        Parent & Student Reviews
-      </p>
-      <h2 className="mt-3 text-3xl font-black text-[#071A2F] md:text-5xl">
-        ⭐ 4.9/5 Student Satisfaction
-      </h2>
-    </div>
-
-    <div className="mt-10 grid gap-6 md:grid-cols-3">
-      {[
-        ["Parent Review", "Amazing improvement in my child's maths speed and confidence."],
-        ["Student Review", "Daily worksheets helped me solve questions much faster."],
-        ["Parent Review", "Best coaching support for Maths practice and regular guidance."],
-      ].map(([name, review]) => (
-        <div
-          key={review}
-          className="rounded-[2rem] border border-slate-100 bg-[#F8FAFC] p-7 shadow-sm transition hover:-translate-y-2 hover:shadow-xl"
-        >
-          <p className="text-2xl">⭐⭐⭐⭐⭐</p>
-          <p className="mt-4 text-lg font-semibold text-slate-700">"{review}"</p>
-          <p className="mt-5 font-black text-[#071A2F]">— {name}</p>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
-
       {/* FEATURES */}
 <section className="px-4 py-16 md:px-6">
   <div className="mx-auto max-w-7xl text-center">
@@ -753,47 +667,29 @@ className="h-full w-full object-contain bg-black"          />
 </section>
 
       {/* LOCATION */}
-<section className="bg-white px-6 py-16">
-  <div className="mx-auto max-w-7xl rounded-[2rem] bg-[#F8FAFC] p-8 shadow-xl">
-    <p className="font-black uppercase tracking-widest text-[#0B66C3]">
-      Visit Edufi Classes
-    </p>
+      <section className="bg-white px-6 py-16">
+        <div className="mt-6 flex flex-col gap-4 md:flex-row md:flex-wrap">
 
-    <h2 className="mt-3 text-3xl font-black text-[#071A2F] md:text-5xl">
-      📍 Edufi Classes, Hisar
-    </h2>
-
-    <p className="mt-4 text-lg font-semibold text-slate-700">
-      202, Lajpat Nagar, Hisar
-    </p>
-
-    <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-      <a
-        href="https://www.google.com/maps/search/?api=1&query=202%20Lajpat%20Nagar%20Hisar"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="rounded-2xl bg-[#071A2F] px-6 py-4 text-center font-black text-white transition hover:bg-[#0B66C3]"
-      >
-        Get Directions
-      </a>
-
-      <a
-        href="tel:9501941186"
-        className="rounded-2xl bg-green-500 px-6 py-4 text-center font-black text-white transition hover:bg-green-600"
-      >
-        📞 Call 9501941186
-      </a>
-
-      <a
-        href="tel:7027732516"
-        className="rounded-2xl bg-[#FFC928] px-6 py-4 text-center font-black text-[#071A2F] transition hover:bg-orange-400"
-      >
-        📞 Call 7027732516
-      </a>
-    </div>
+  <div className="rounded-2xl bg-white px-6 py-4 text-lg font-black text-[#071A2F] shadow-sm">
+    📍 202, Lajpat Nagar, Hisar
   </div>
-</section>
 
+  <a
+    href="tel:9501941186"
+    className="rounded-2xl bg-white px-6 py-4 text-lg font-black text-[#071A2F] shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+  >
+    📞 9501941186
+  </a>
+
+  <a
+    href="tel:7027732516"
+    className="rounded-2xl bg-white px-6 py-4 text-lg font-black text-[#071A2F] shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+  >
+    📞 7027732516
+  </a>
+
+</div>
+</section>
       <section className="px-6 py-16">
   <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-2">
 
@@ -907,40 +803,14 @@ className="h-full w-full object-contain bg-black"          />
           </div>
         </div>
       )}
-      {/* FLOATING CALL BUTTON - DESKTOP */}
+      {/* FLOATING CALL BUTTON */}
 <a
   href="tel:9501941186"
-  className="fixed bottom-6 right-6 z-50 hidden h-16 w-16 items-center justify-center rounded-full bg-green-500 text-3xl text-white shadow-2xl transition hover:scale-110 hover:bg-green-600 md:flex"
+  className="fixed bottom-6 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-green-500 text-3xl text-white shadow-2xl transition hover:scale-110 hover:bg-green-600"
   aria-label="Call Edufi Classes"
 >
   📞
-</a>
-
-{/* STICKY MOBILE BOTTOM BAR */}
-<div className="fixed bottom-0 left-0 right-0 z-50 grid grid-cols-3 border-t border-white/20 bg-[#071A2F] text-center text-xs font-black text-white shadow-2xl md:hidden">
-  <a href="tel:9501941186" className="py-3">
-    📞 Call
-  </a>
-  <a
-    href="https://wa.me/919501941186"
-    target="_blank"
-    rel="noopener noreferrer"
-    onClick={trackLead}
-    className="border-x border-white/20 py-3"
-  >
-    💬 WhatsApp
-  </a>
-  <a
-    href="https://clpjack.page.link/atPk"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="py-3"
-  >
-    📱 App
-  </a>
-</div>
-
-{showOfferPopup && (
+</a>{showOfferPopup && (
   <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4">
     <div className="relative w-[92%] max-w-sm max-h-[88vh] overflow-y-auto rounded-3xl bg-white shadow-2xl">
 

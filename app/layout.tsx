@@ -3,8 +3,30 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Edufi Classes",
-  description: "Sigma Maths Course",
+  title: "Edufi Classes Hisar | Maths Coaching Classes 6th–10th",
+  description:
+    "Join Edufi Classes Hisar for Maths, Science, English, SST and Reasoning. Sigma Maths 30-Day Challenge with daily worksheets, speed tricks and tests.",
+
+  keywords: [
+    "Edufi Classes",
+    "Edufi Classes Hisar",
+    "Maths Coaching Hisar",
+    "Class 10 Maths",
+    "Class 9 Maths",
+    "Sigma Maths Course",
+    "Maths Tricks",
+    "Online Maths Classes",
+  ],
+
+  openGraph: {
+    title: "Edufi Classes Hisar",
+    description:
+      "Improve Maths speed, confidence and problem solving with Sigma Maths.",
+    url: "https://course.eduficlasses.com",
+    siteName: "Edufi Classes",
+    images: ["/sigma-course.jpg"],
+    type: "website",
+  },
 };
 
 const PIXEL_ID = "1819304022723843";
@@ -17,8 +39,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <head>
+   <html lang="en-IN">
+        <head>
 
         {/* GOOGLE TAG */}
         <Script
