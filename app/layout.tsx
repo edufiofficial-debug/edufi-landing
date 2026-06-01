@@ -41,6 +41,29 @@ export default function RootLayout({
   return (
    <html lang="en-IN">
         <head>
+          <Script
+  id="local-business-schema"
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      name: "Edufi Classes",
+      url: "https://course.eduficlasses.com",
+      telephone: "+91-9501941186",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "202, Lajpat Nagar",
+        addressLocality: "Hisar",
+        addressRegion: "Haryana",
+        addressCountry: "IN",
+      },
+      areaServed: "Hisar",
+      description:
+        "Coaching institute for Classes 6th to 10th Maths, Science, English, SST and Reasoning.",
+    }),
+  }}
+/>
 
         {/* GOOGLE TAG */}
         <Script
