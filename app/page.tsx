@@ -27,7 +27,7 @@ export default function Home() {
     phone: "",
   });
 
-  const offerEndDate = new Date("2026-06-12T00:00:00").getTime();
+  const offerEndDate = new Date("2026-06-08T00:00:00").getTime();
 
   const [timeLeft, setTimeLeft] = useState({
     days: "00",
