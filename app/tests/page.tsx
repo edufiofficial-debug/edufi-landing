@@ -4,7 +4,7 @@ const tests = [
   {
     classNo: "Class 01",
     title: "SIGMA Speed Maths Challenge – Level 01",
-    topic: "Multiplication Tricks + ×11 Shortcut",
+    topic: "ADDITION TRICKS + ×11 Shortcut",
     duration: "10 Minutes",
     questions: "20 Questions",
     link: "PASTE_YOUR_EXAMIN8_TEST_LINK_HERE",
