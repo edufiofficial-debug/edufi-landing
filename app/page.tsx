@@ -147,7 +147,7 @@ window.open(
 
       {/* STICKY BATCH STRIP */}
       <section className="sticky top-[76px] z-30 bg-red-600 px-4 py-3 text-center text-sm font-black text-white shadow-lg md:text-base">
-        🔥 Sigma Batch Starts 13 June | Enroll at ₹499 | Limited Seats
+        🔥 Sigma Batch Starts 8 June | Enroll at ₹499 | Limited Seats
       </section>
 
       {/* OFFER BAR */}
@@ -293,7 +293,7 @@ window.open(
         </div>
 
         <p className="rounded-full bg-green-100 px-4 py-2 text-center text-sm font-black text-green-700">
-          ✅ 19 Seats Left • Batch Starts 13 June
+          ✅ 37 Seats Left • Batch Starts 8 June
         </p>
 
         <p className="mt-5 text-xs font-black uppercase tracking-wide text-orange-600">
