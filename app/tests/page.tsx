@@ -7,7 +7,7 @@ const tests = [
     topic: "ADDITION TRICKS + ×11 Shortcut",
     duration: "10 Minutes",
     questions: "20 Questions",
-    link: "PASTE_YOUR_EXAMIN8_TEST_LINK_HERE",
+    link: "https://web.examin8.com/testpaper/assessment/detail/2804097/180791780395253",
     status: "live",
   },
   {
