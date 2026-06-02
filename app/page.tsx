@@ -974,7 +974,7 @@ className="h-full w-full object-contain bg-black"          />
 
         <div className="mb-5 text-center">
           <span className="rounded-full bg-red-100 px-5 py-2 text-lg font-bold text-red-600">
-            🔥 Only 19 Seats Left
+            🔥 Only 37 Seats Left
           </span>
         </div>
 
