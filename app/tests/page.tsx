@@ -13,11 +13,11 @@ const tests = [
   {
     classNo: "Class 02",
     title: "SIGMA Speed Maths Challenge – Level 02",
-    topic: "Fast 2-Digit Multiplication",
+    topic: "SUBTRACTION TRICKS + ×9 Shortcut",
     duration: "10 Minutes",
-    questions: "20 Questions",
-    link: "#",
-    status: "coming",
+    questions: "10 Questions",
+    link: "https://web.examin8.com/testpaper/assessment/detail/2805755/292771780486102",
+    status: "Live",
   },
   {
     classNo: "Class 03",
