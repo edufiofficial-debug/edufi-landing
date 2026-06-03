@@ -89,6 +89,13 @@ Phone: ${formData.phone}
 Coupon Code: FN100`;
 trackLead();
 
+// Google Ads Conversion Tracking
+if (typeof window !== "undefined" && (window as any).gtag) {
+  (window as any).gtag("event", "conversion", {
+    send_to: "AW-18031357095/Tuv3CNau64wcEKfZgpZD",
+  });
+}
+
 window.open(
   `https://wa.me/919501941186?text=${encodeURIComponent(message)}`,
   "_blank"
