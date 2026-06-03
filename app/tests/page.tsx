@@ -17,7 +17,7 @@ const tests = [
     duration: "10 Minutes",
     questions: "10 Questions",
     link: "https://web.examin8.com/testpaper/assessment/detail/2805755/292771780486102",
-    status: "Live",
+    status: "live",
   },
   {
     classNo: "Class 03",
