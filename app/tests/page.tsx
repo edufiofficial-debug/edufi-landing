@@ -23,9 +23,9 @@ const tests = [
     classNo: "Class 03",
     title: "SIGMA Speed Maths Challenge – Level 03",
     topic: "Multiplication 2 digtit by 2 digit",
-    duration: "10 Minutes",
-    questions: "20 Questions",
-    link: "#",
+    duration: "15 Minutes",
+    questions: "10 Questions",
+    link: "https://web.examin8.com/testpaper/assessment/detail/2806735/652561780556210",
     status: "live",
   },
   {
