@@ -22,11 +22,11 @@ const tests = [
   {
     classNo: "Class 03",
     title: "SIGMA Speed Maths Challenge – Level 03",
-    topic: "Squares Ending with 5",
+    topic: "Multiplication 2 digtit by 2 digit",
     duration: "10 Minutes",
     questions: "20 Questions",
     link: "#",
-    status: "coming",
+    status: "live",
   },
   {
     classNo: "Class 04",
