@@ -34,8 +34,8 @@ const tests = [
     topic: "Squares Near 100",
     duration: "10 Minutes",
     questions: "20 Questions",
-    link: "#",
-    status: "coming",
+    link: "https://web.examin8.com/testpaper/assessment/detail/2819266/909831781252998",
+    status: "live",
   },
   {
     classNo: "Class 05",
