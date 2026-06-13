@@ -43,7 +43,7 @@ const tests = [
     topic: "Division Tricks",
     duration: "10 Minutes",
     questions: "20 Questions",
-    link: "#https://web.examin8.com/testpaper/assessment/detail/2820670/442751781329633",
+    link: "https://web.examin8.com/testpaper/assessment/detail/2820670/442751781329633",
     status: "live",
   },
   {
