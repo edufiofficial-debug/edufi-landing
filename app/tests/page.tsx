@@ -13,7 +13,7 @@ const tests = [
   {
     classNo: "Class 02",
     title: "SIGMA Speed Maths Challenge – Level 02",
-    topic: "SUBTRACTION TRICKS + ×9 Shortcut",
+    topic: "SUBTRACTION TRICk + ×9 Shortcut",
     duration: "10 Minutes",
     questions: "10 Questions",
     link: "https://web.examin8.com/testpaper/assessment/detail/2805755/292771780486102",
@@ -22,7 +22,7 @@ const tests = [
   {
     classNo: "Class 03",
     title: "SIGMA Speed Maths Challenge – Level 03",
-    topic: "Multiplication 2 digtit by 2 digit",
+    topic: "Multiplication 2 digit by 2 digit",
     duration: "15 Minutes",
     questions: "10 Questions",
     link: "https://web.examin8.com/testpaper/assessment/detail/2806735/652561780556210",
@@ -40,7 +40,7 @@ const tests = [
   {
     classNo: "Class 05",
     title: "SIGMA Speed Maths Challenge – Level 05",
-    topic: "Division Tricks",
+    topic: "Multiplication 2",
     duration: "10 Minutes",
     questions: "20 Questions",
     link: "https://web.examin8.com/testpaper/assessment/detail/2820670/442751781329633",
