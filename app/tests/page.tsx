@@ -55,6 +55,50 @@ const tests = [
     link: "https://web.examin8.com/testpaper/assessment/detail/2822557/399581781417485",
     status: "live",
   },
+  {
+    classNo: "Class 07",
+    title: "SIGMA Weekly Test 01",
+    topic: "Revision Test",
+    duration: "20 Minutes",
+    questions: "20 Questions",
+    link: "https://web.examin8.com/testpaper/assessment/detail/2825092/396591781584439",
+    status: "live",
+  },
+
+  {
+    classNo: "Class 08",
+    title: "SIGMA Weekly Test 01",
+    topic: "Revision Test",
+    duration: "15 Minutes",
+    questions: "20 Questions",
+    link: "#",
+    status: "coming-soon",
+  },
+  {
+    classNo: "Class 09",
+    title: "SIGMA Weekly Test 01",
+    topic: "Revision Test",
+    duration: "15 Minutes",
+    questions: "20 Questions",
+    link: "#",
+    status: "coming-soon",
+  },{
+    classNo: "Class 10",
+    title: "SIGMA Weekly Test 01",
+    topic: "Revision Test",
+    duration: "15 Minutes",
+    questions: "20 Questions",
+    link: "#",
+    status: "coming-soon",
+  },{
+    classNo: "Class 11",
+    title: "SIGMA Weekly Test 01",
+    topic: "Revision Test",
+    duration: "15 Minutes",
+    questions: "20 Questions",
+    link: "#",
+    status: "coming-soon",
+  },
 ];
 
 export default function TestsPage() {
