@@ -27,7 +27,7 @@ export default function Home() {
     phone: "",
   });
 
-  const offerEndDate = new Date("2026-06-08T00:00:00").getTime();
+  const offerEndDate = new Date("2026-06-26T00:00:00").getTime();
 
   const [timeLeft, setTimeLeft] = useState({
     days: "00",
@@ -300,7 +300,7 @@ window.open(
         </div>
 
         <p className="rounded-full bg-green-100 px-4 py-2 text-center text-sm font-black text-green-700">
-          ✅ 37 Seats Left • Batch Starts 8 June
+          ✅ 11 Seats Left • Batch Starts Every Monday
         </p>
 
         <p className="mt-5 text-xs font-black uppercase tracking-wide text-orange-600">
