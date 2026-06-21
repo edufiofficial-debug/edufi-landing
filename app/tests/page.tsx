@@ -84,12 +84,12 @@ const tests = [
     status: "live",
   },{
     classNo: "Class 10",
-    title: "SIGMA Weekly Test 01",
+    title: "SIGMA Weekly Test 10",
     topic: "Revision Test",
     duration: "15 Minutes",
     questions: "20 Questions",
     link: "https://web.examin8.com/testpaper/assessment/detail/2834099/518201782031926",
-    status: "coming-soon",
+    status: "live",
   },{
     classNo: "Class 11",
     title: "SIGMA Weekly Test 01",
