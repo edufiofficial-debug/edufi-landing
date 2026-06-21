@@ -88,7 +88,7 @@ const tests = [
     topic: "Revision Test",
     duration: "15 Minutes",
     questions: "20 Questions",
-    link: "#",
+    link: "https://web.examin8.com/testpaper/assessment/detail/2834099/518201782031926",
     status: "coming-soon",
   },{
     classNo: "Class 11",
