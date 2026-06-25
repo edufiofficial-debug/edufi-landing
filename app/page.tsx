@@ -1047,7 +1047,7 @@ className="h-full w-full object-contain bg-black"          />
     <div className="bg-white rounded-3xl p-6 text-center max-w-sm w-full shadow-2xl">
 
       <h3 className="text-2xl font-bold">
-        Pay ₹1049
+        Pay ₹1999
       </h3>
 
       <p className="text-gray-600 mt-2">
