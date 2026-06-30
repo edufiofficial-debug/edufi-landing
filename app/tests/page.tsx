@@ -96,8 +96,8 @@ const tests = [
     topic: "Revision Test",
     duration: "15 Minutes",
     questions: "20 Questions",
-    link: "#",
-    status: "coming-soon",
+    link: "https://web.examin8.com/testpaper/assessment/detail/2851383/374061782821090",
+    status: "live",
   },
 ];
 
