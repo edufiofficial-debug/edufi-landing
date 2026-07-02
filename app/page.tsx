@@ -9,7 +9,7 @@ type FormData = {
 };
 
 const UPI_ID = "edufi987@fbl";
-const COURSE_PRICE = 1999;
+const COURSE_PRICE = 2566;
 
 const COURSE_LINK =
   "https://rlqyso.courses.store/842135?utm_source=other&utm_medium=tutor-course-referral&utm_campaign=course-overview-webapp";
@@ -154,7 +154,7 @@ window.open(
 
       {/* STICKY BATCH STRIP */}
       <section className="sticky top-[76px] z-30 bg-red-600 px-4 py-3 text-center text-sm font-black text-white shadow-lg md:text-base">
-        🔥 Sigma Batch Starts 8 June | Enroll at ₹1999 | Limited Seats
+        🔥 Sigma Batch Starts 8 June | Enroll at ₹2566 | Limited Seats
       </section>
 
       {/* OFFER BAR */}
@@ -308,7 +308,7 @@ window.open(
         </p>
 
         <div className="mt-2 flex items-end gap-2">
-          <h2 className="text-5xl font-black text-[#071A2F]">₹1999</h2>
+          <h2 className="text-5xl font-black text-[#071A2F]">₹2566</h2>
 
           <p className="mb-1 text-base font-black text-red-600">
             50% OFF
@@ -362,7 +362,7 @@ window.open(
           onClick={openCourse}
           className="mt-6 w-full rounded-2xl bg-[#071A2F] px-5 py-4 text-base font-black text-white shadow-xl transition hover:-translate-y-1 hover:bg-[#0B66C3]"
         >
-          Enroll at ₹1999 →
+          Enroll at ₹2566 →
         </button>
         <p className="mt-2 text-center text-xs text-gray-500">
   Course link not working?
@@ -992,7 +992,7 @@ className="h-full w-full object-contain bg-black"          />
           </p>
 
           <div className="mt-3 text-6xl font-extrabold text-slate-900">
-            ₹1999
+            ₹2566
           </div>
 
           <p className="mt-2 text-xl text-slate-500">
@@ -1047,7 +1047,7 @@ className="h-full w-full object-contain bg-black"          />
     <div className="bg-white rounded-3xl p-6 text-center max-w-sm w-full shadow-2xl">
 
       <h3 className="text-2xl font-bold">
-        Pay ₹1999
+        Pay ₹2566
       </h3>
 
       <p className="text-gray-600 mt-2">
